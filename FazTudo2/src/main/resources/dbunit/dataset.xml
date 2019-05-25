@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <!-- Usuario id = 1 (dono_estabelecimento) -->
+    <tb_usuario disc_usuario = "D" txt_nome = "Ricardo Matias" txt_login = "Malicius" txt_senha = "Dieg!1998"
+    dt_data_nascimento = "1999-08-23"  NUM_VERSAO="1"/>
+    <tb_dono_estabelecimento id_usuario = "1" txt_cpf = "47771662013"/>
+    <!-- Usuario id = 2 (cliente) -->
+    <tb_usuario disc_usuario = "C" txt_nome = "Diego Santos" txt_login = "Sandieg2k" txt_senha = "Dieg!1998"
+    dt_data_nascimento = "1994-11-17" NUM_VERSAO="1"/>
+    <tb_cliente id_usuario = "2" nivel = "5"/>
+    <!-- Usuario id = 3 (cliente) -->
+    <tb_usuario disc_usuario = "C" txt_nome = "Nicolas Melo" txt_login = "Kinhomelo" txt_senha = "Dieg!1998"
+    dt_data_nascimento = "1999-08-23" NUM_VERSAO="1"/>
+    <tb_cliente id_usuario = "3" nivel = "1"/>
+    <!-- Usuario id = 4 (dono_estabelecimento) -->
+    <tb_usuario disc_usuario = "D" txt_nome = "Zangado Teste" txt_login = "Umdos7" txt_senha = "Dieg!1998"
+    dt_data_nascimento = "1991-06-22" NUM_VERSAO="1"/>
+    <tb_dono_estabelecimento id_usuario = "4" txt_cpf = "38554994035"/>
+    <!-- Usuario id = 5 (dono_estabelecimento) -->
+    <tb_usuario disc_usuario = "D" txt_nome = "Natanael Lemos" txt_login = "Mini Natan" txt_senha = "Dieg!1998"
+    dt_data_nascimento = "1995-07-12" NUM_VERSAO="1"/>
+    <tb_dono_estabelecimento id_usuario = "5" txt_cpf = "70369884019"/>
+    <!-- Usuario id = 6 (dono_estabelecimento) -->
+    <tb_usuario disc_usuario = "D" txt_nome = "Guilherme Henrique" txt_login = "Lastghoul" txt_senha = "Dieg!1998"
+    dt_data_nascimento = "1999-10-23" NUM_VERSAO="1"/>
+    <tb_dono_estabelecimento id_usuario = "6" txt_cpf = "47926900052"/>
+    <!-- Usuario id = 7 (cliente) -->
+    <tb_usuario disc_usuario = "C" txt_nome = "Marcos Vinicius" txt_login = "OUT_Morpheu" txt_senha = "Dieg!1998" NUM_VERSAO="1"/>
+    <tb_cliente id_usuario = "7" nivel = "3"/>
+    <tb_usuario disc_usuario = "C" txt_nome = "Cliente Falso" txt_login = "Falso" txt_senha = "Dieg!1998" NUM_VERSAO="1"/>
+    <tb_cliente id_usuario = "8" nivel = "1"/>
+    
+    
+    
+    <!-- ** Para teste 1 dono mais de um estabelecimento ** -->
+    <!-- Estabelecimento id = 1 (dono -> Ricardo Matias id = 1)-->
+    <tb_estabelecimento id = "1" txt_cnpj = "45071513000121" txt_nome = "Barbearia do Malicius" txt_status = "Aprovado"
+                        end_txt_bairro = "Arthur 2" end_txt_cep = "53415663" end_txt_cidade = "Paulista"
+                        end_txt_complemento = "A" end_txt_estado = "Pernambuco" end_numero = "110" 
+                        end_txt_rua = "Teste" NUM_VERSAO="1"/>
+    <tb_estabelecimento_dono_estabelecimento id_usuario = "1" id_estabelecimento = "1" />
+    <!-- Estabelecimento id = 2 (dono -> Ricardo Matias id = 1)-->
+    <tb_estabelecimento id = "2" txt_cnpj = "88578729000190" txt_nome = "Barbearia Bom de Tesoura" txt_status = "Aprovado"
+                        end_txt_bairro = "Arthur 5" end_txt_cep = "53415672" end_txt_cidade = "Paulista"
+                        end_txt_complemento = "C" end_txt_estado = "Pernambuco" end_numero = "202" 
+                        end_txt_rua = "Teste" NUM_VERSAO="1"/>
+    <tb_estabelecimento_dono_estabelecimento id_usuario = "1" id_estabelecimento = "2" />
+    
+    <!-- ** Para teste de remorção de estabelecimento sem relacionamento (sem sentido, porém para teste inicial) ** -->
+    <!-- Estabelecimento id = 3 (sem dono)-->
+    <tb_estabelecimento id = "3" txt_cnpj = "18644813000180" txt_nome = "Bar do Guilherme" txt_status = "Aprovado"
+                        end_txt_bairro = "Nossa Senhora do Ó" end_txt_cep = "53431705" end_txt_cidade = "Paulista"
+                        end_txt_complemento = "C" end_txt_estado = "Pernambuco" end_numero = "202" 
+                        end_txt_rua = "Rua Job Vieira de Lima" NUM_VERSAO="1"/>
+    
+    <!-- ** Para teste de estabelecimento com mais de um dono ** -->
+    <tb_estabelecimento id = "4" txt_cnpj = "34943701000186" txt_nome = "Lanchonete dos Anões" txt_status = "Aprovado"
+                        end_txt_bairro = "Coqueiral" end_txt_cep = "50791362" end_txt_cidade = "Recife"
+                        end_txt_estado = "Pernambuco" end_numero = "81" 
+                        end_txt_rua = "Rua do Hortelã" NUM_VERSAO="1"/>
+    
+    <!-- ** Para teste de estabelecimento relacionado com serviço ** -->
+    <tb_estabelecimento id = "5" txt_cnpj = "78192964000176" txt_nome = "Lava Jato Fast" txt_status = "Aprovado"
+                        end_txt_bairro = "Alameda" end_txt_cep = "65199362" end_txt_cidade = "Paulista"
+                        end_txt_estado = "Pernambuco" end_numero = "81" 
+                        end_txt_rua = "Rua das Oliveiras" NUM_VERSAO="1"/>
+    <tb_estabelecimento id = "6" txt_cnpj = "13337029000105" txt_nome = "Roupas for All" txt_status = "Aprovado"
+                        end_txt_bairro = "Alameda" end_txt_cep = "65199390" end_txt_cidade = "Paulista"
+                        end_txt_estado = "Pernambuco" end_numero = "44" 
+                        end_txt_rua = "Rua das Mangueiras" NUM_VERSAO="1"/>
+    
+    <tb_estabelecimento_dono_estabelecimento id_usuario = "4" id_estabelecimento = "4" />
+    <tb_estabelecimento_dono_estabelecimento id_usuario = "5" id_estabelecimento = "4" />
+    <tb_estabelecimento_dono_estabelecimento id_usuario = "6" id_estabelecimento = "5" />
+    
+    <!-- Categoria id = 1 -->
+    <tb_categoria id = "1" txt_nome = "Beleza" NUM_VERSAO="1"/>
+    <!-- Categoria id = 2 -->
+    <tb_categoria id = "2" txt_nome = "Esporte" NUM_VERSAO="1"/>
+    <!-- Categoria id = 3 -->
+    <tb_categoria id = "3" txt_nome = "Vestuário" NUM_VERSAO="1"/>
+    <!-- Categoria id = 4 -->
+    <tb_categoria id = "4" txt_nome = "Automovel" NUM_VERSAO="1"/>
+    <!-- Categoria id = 5 -->
+    <tb_categoria id = "5" txt_nome = "Bebidas" NUM_VERSAO="1"/>
+    <!-- Categoria id = 6 -->
+    <tb_categoria id = "6" txt_nome = "Casa" NUM_VERSAO="1"/>
+    
+    
+    <!-- Serviço id = 1 -->
+    <tb_servico id = "1" txt_nome = "Costura de roupas" id_estabelecimento = "6"
+    txt_descricao = "Costura de roupas de todos os materiais" NUM_VERSAO="1"/>
+    <tb_servicos_categorias id_servico = "1" id_categoria = "3"/>
+    
+    <!-- Serviço id = 2 -->
+    <tb_servico id = "2" txt_nome = "Corte de cabelo" id_estabelecimento = "1"
+    txt_descricao = "Corte de cabelo a tesoura e máquina" NUM_VERSAO="1"/>
+    <tb_servicos_categorias id_servico = "2" id_categoria = "1"/>
+    <tb_servicos_categorias id_servico = "2" id_categoria = "3"/>
+    
+    <!-- Serviço id = 3 -->
+    <tb_servico id = "3" txt_nome = "Venda de roupas" id_estabelecimento = "6"
+    txt_descricao = "Comercio de roupas usadas com preço competitivo, atendemos em domicilio" NUM_VERSAO="1"/>
+    <tb_servicos_categorias id_servico = "3" id_categoria = "3"/>
+    
+    <!-- Serviço id = 4 -->
+    <tb_servico id = "4" txt_nome = "Lava Jato" id_estabelecimento = "5"
+    txt_descricao = "Lavagem de carros e motos" NUM_VERSAO="1"/>
+    <tb_servicos_categorias id_servico = "4" id_categoria = "4"/>
+    
+    <!-- Serviço id = 5 -->
+    <tb_servico id = "5" txt_nome = "Venda de Bebidas" id_estabelecimento = "3"
+    txt_descricao = "Venda de bebidas com e sem alcool" NUM_VERSAO="1"/>
+    <tb_servicos_categorias id_servico = "5" id_categoria = "5"/>
+
+    <!-- Serviço id = 6 -->
+    <tb_servico id = "6" txt_nome = "Corte a tesoura" id_estabelecimento = "2"
+    txt_descricao = "Corte de cabelo feito apenas com tesoura" NUM_VERSAO="1"/>
+    <tb_servicos_categorias id_servico = "6" id_categoria = "1"/>
+
+    <!-- Serviço id = 7 -->
+    <tb_servico id = "7" txt_nome = "Corte de cabelo completo" id_estabelecimento = "2"
+    txt_descricao = "Corte de cabelo feito com máquina e tesoura" NUM_VERSAO="1"/>
+    <tb_servicos_categorias id_servico = "7" id_categoria = "1"/>
+    
+    <tb_telefone_usuario txt_num_telefone = "918291812" id_usuario = "2"/>
+    <tb_telefone_usuario txt_num_telefone = "34371951" id_usuario = "2"/> 
+    <tb_telefone_usuario txt_num_telefone = "864729314" id_usuario = "1"/> 
+    <tb_telefone_usuario txt_num_telefone = "794018923" id_usuario = "3"/>
+
+
+    
+    <tb_telefone_estabelecimento txt_num_telefone = "794018923" id_estabelecimento = "1"/>
+    <tb_telefone_estabelecimento txt_num_telefone = "214257879" id_estabelecimento = "2"/>  
+    <tb_telefone_estabelecimento txt_num_telefone = "245473886" id_estabelecimento = "3"/>  
+    <tb_telefone_estabelecimento txt_num_telefone = "977853456" id_estabelecimento = "4"/>
+    <tb_telefone_estabelecimento txt_num_telefone = "234247587" id_estabelecimento = "4"/>    
+    <tb_telefone_estabelecimento txt_num_telefone = "765734534" id_estabelecimento = "5"/>  
+    <tb_telefone_estabelecimento txt_num_telefone = "367847457" id_estabelecimento = "6"/>
+    <tb_telefone_estabelecimento txt_num_telefone = "234564676" id_estabelecimento = "6"/>      
+    
+    <!-- Corte de cabelo de nicolas -->
+    <tb_horarios_marcados id = "1" comparecimento = "true" id_cliente = "3" id_servico = "2"
+    data = "2020-06-22 08:30:00" NUM_VERSAO="1"/>  
+    <tb_horarios_marcados id = "2" comparecimento = "true" id_cliente = "2" id_servico = "3"
+    data = "2020-06-22 14:00:00" NUM_VERSAO="1"/> 
+    <tb_horarios_marcados id = "3" comparecimento = "true" id_cliente = "7" id_servico = "1"
+    data = "2020-03-30 07:00:00" NUM_VERSAO="1"/>   
+    <tb_horarios_marcados id = "4" comparecimento = "false" id_cliente = "8" id_servico = "4"
+    data = "2020-03-30 08:00:00" NUM_VERSAO="1"/>  
+</dataset>
