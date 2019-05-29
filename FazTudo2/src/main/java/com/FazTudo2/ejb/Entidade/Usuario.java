@@ -30,6 +30,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  *
@@ -49,16 +50,17 @@ public abstract class Usuario extends Entidade implements Serializable {
     @Column(name = "txt_nome", length = 100, nullable = false)
     protected String nome;
 
-    @Past
-    @Temporal(TemporalType.DATE)
+    //@Past
+    //@Temporal(TemporalType.DATE)
     @Column(name = "dt_data_nascimento", nullable = true /* nullable true para testes*/)
     protected Date dataNascimento;
 
+    //@NotBlank
     @Column(name = "txt_login", length = 30, nullable = false)
     protected String login;
 
-    @Pattern(regexp = "((?=.*\\p{Digit})(?=.*\\p{Lower})(?=.*\\p{Upper})(?=.*\\p{Punct}).{6,20})", 
-            message = "{exemplo.jpa.Usuario.senha}")
+    /*@Pattern(regexp = "((?=.*\\p{Digit})(?=.*\\p{Lower})(?=.*\\p{Upper})(?=.*\\p{Punct}).{6,20})", 
+            message = "{exemplo.jpa.Usuario.senha}")*/
     @Column(name = "txt_senha", length = 20, nullable = false)
     protected String senha;
     

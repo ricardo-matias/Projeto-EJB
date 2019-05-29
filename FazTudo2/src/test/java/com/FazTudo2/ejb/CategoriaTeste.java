@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author marcos
+ * @author ricardo
  */
 public class CategoriaTeste extends Teste {
 
@@ -33,10 +33,25 @@ public class CategoriaTeste extends Teste {
     public void tearDown() {
         categoriaServico = null;
     }
+    
+    @Test
+    public void existeCategoria() { 
+        Categoria categoria = categoriaServico.criar();
+        categoria.setNome("Bebidas");
+        assertTrue(categoriaServico.existe(categoria));
+    }
 
     @Test
-    public void consultarCategoria1() {
-        assertEquals("Beleza", categoriaServico.consultarCategoriaPorId(1L).getNome());
+    public void consultarCategoriaPorId() {
+        assertNotNull(categoriaServico.consultarCategoriaPorId(2L).getId());
+        assertEquals("Esporte", categoriaServico.consultarCategoriaPorId(2L).getNome());
+    }
+    
+    @Test
+    public void consultarCategoriaPorNome() {
+        Categoria categoria = categoriaServico.categoriaPorNome("Esporte").get(0);
+        assertNotNull(categoria);
+        assertEquals("Esporte", categoria.getNome());
     }
     
     @Test
@@ -50,15 +65,10 @@ public class CategoriaTeste extends Teste {
     
     @Test
     public void atualizarCategoria() { 
-        
         Categoria categoria = categoriaServico.consultarPorId(new Long(1));
         logger.info(categoria.getNome());
         categoria.setNome("Estetica");
         categoria = categoriaServico.atualizar(categoria);
-        
-        /*List<Categoria> categorias = categoriaServico.categoriaPorNome("UpdatedCat");
-        assertEquals(1, categorias.size());
-        categoria = categorias.get(0);*/
         assertEquals("Estetica", categoria.getNome());
     }
     

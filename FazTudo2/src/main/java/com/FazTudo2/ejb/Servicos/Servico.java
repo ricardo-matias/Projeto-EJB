@@ -55,10 +55,10 @@ public abstract class Servico<T extends Entidade> {
     }
 
     public T atualizar(@Valid T entidade) {
-        if (existe(entidade)) {
+        //if (existe(entidade)) {
             entidade = entityManager.merge(entidade);
             entityManager.flush();
-        }
+        //}
         
         return entidade;
     }

@@ -24,6 +24,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.QueryHint;
 import javax.persistence.Table;
 import javax.validation.Valid;
+import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.br.CPF;
 
 /**
@@ -39,13 +40,23 @@ import org.hibernate.validator.constraints.br.CPF;
         {
             @NamedQuery(
                     name = "DonoEstabelecimento.porNome",
-                    query = "select d FROM DonoEstabelecimento d WHERE d.nome LIKE :nome ORDER BY d.nome DESC"
+                    query = "select d FROM DonoEstabelecimento d WHERE d.nome LIKE ?1 ORDER BY d.nome DESC"
+            ),
+            @NamedQuery(
+                    name = "DonoEstabelecimento.porId",
+                    query = "select d FROM DonoEstabelecimento d WHERE d.id LIKE ?1 ORDER BY d.id DESC"
+            ),
+            
+            @NamedQuery(
+                    name = "DonoEstabelecimento.porCpf",
+                    query = "select d FROM DonoEstabelecimento d WHERE d.cpf LIKE :cpf"
             )
         }
 )
 public class DonoEstabelecimento extends Usuario implements Serializable {
     @CPF
-    @Column(name = "txt_cpf", nullable = false, length = 11, unique = true)
+    @NotBlank
+    @Column(name = "txt_cpf", nullable = false, length = 15, unique = true)
     private String cpf;
 
     @Valid
@@ -84,26 +95,4 @@ public class DonoEstabelecimento extends Usuario implements Serializable {
     public void setEstabelecimentos(List<Estabelecimento> estabelecimentos) {
         this.estabelecimentos = estabelecimentos;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (this.id != null ? this.id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        if (!(object instanceof DonoEstabelecimento)) {
-            return false;
-        }
-
-        DonoEstabelecimento other = (DonoEstabelecimento) object;
-
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
 }

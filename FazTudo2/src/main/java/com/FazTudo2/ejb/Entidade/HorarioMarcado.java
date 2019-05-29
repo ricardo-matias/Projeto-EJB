@@ -46,8 +46,8 @@ public class HorarioMarcado extends Entidade implements Serializable{
     
     public HorarioMarcado(){}
     
-    @Future
-    @Temporal(TemporalType.TIMESTAMP)
+    //@Future
+    //@Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data")
     private Date data;
     

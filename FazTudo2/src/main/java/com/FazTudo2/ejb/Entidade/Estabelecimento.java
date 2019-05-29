@@ -70,7 +70,7 @@ public class Estabelecimento extends Entidade implements Serializable {
     @Column(name = "txt_nome", length = 100, nullable = false)
     private String nome;
 
-    @CNPJ
+    //@CNPJ
     @Column(name = "txt_cnpj", length = 14, nullable = false, unique = true)
     private String cnpj;
 
@@ -91,7 +91,7 @@ public class Estabelecimento extends Entidade implements Serializable {
     @Column(name = "txt_num_telefone")
     protected Collection<String> telefones;
 
-    @Valid
+    //@Valid
     @OneToMany(mappedBy = "estabelecimento", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     List<Servico> servicos;
 

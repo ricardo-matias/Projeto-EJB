@@ -3,7 +3,7 @@
     <!-- Usuario id = 1 (dono_estabelecimento) -->
     <tb_usuario disc_usuario = "D" txt_nome = "Ricardo Matias" txt_login = "Malicius" txt_senha = "Dieg!1998"
     dt_data_nascimento = "1999-08-23"  NUM_VERSAO="1"/>
-    <tb_dono_estabelecimento id_usuario = "1" txt_cpf = "47771662013"/>
+    <tb_dono_estabelecimento id_usuario = "1" txt_cpf = "740.707.044-00"/>
     <!-- Usuario id = 2 (cliente) -->
     <tb_usuario disc_usuario = "C" txt_nome = "Diego Santos" txt_login = "Sandieg2k" txt_senha = "Dieg!1998"
     dt_data_nascimento = "1994-11-17" NUM_VERSAO="1"/>

@@ -50,7 +50,6 @@ public class CategoriaServico extends Servico<Categoria> {
         return c;
     }
     
-    @Override
     public boolean existe(@NotNull Categoria entidade) {
         TypedQuery<Categoria> query
                 = entityManager.createNamedQuery("Categoria.porNome", Categoria.class);
