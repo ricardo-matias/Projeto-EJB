@@ -10,15 +10,14 @@ import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.6.1.v20150605-rNA", date="2019-05-25T08:44:15")
+@Generated(value="EclipseLink-2.6.1.v20150605-rNA", date="2019-05-29T11:01:30")
 @StaticMetamodel(Estabelecimento.class)
-public class Estabelecimento_ { 
+public class Estabelecimento_ extends Entidade_ {
 
     public static volatile ListAttribute<Estabelecimento, Servico> servicos;
     public static volatile ListAttribute<Estabelecimento, DonoEstabelecimento> donos;
     public static volatile SingularAttribute<Estabelecimento, Endereco> endereco;
     public static volatile SingularAttribute<Estabelecimento, String> nome;
-    public static volatile SingularAttribute<Estabelecimento, Long> id;
     public static volatile SingularAttribute<Estabelecimento, String> cnpj;
     public static volatile CollectionAttribute<Estabelecimento, String> telefones;
     public static volatile ListAttribute<Estabelecimento, Foto> fotos;

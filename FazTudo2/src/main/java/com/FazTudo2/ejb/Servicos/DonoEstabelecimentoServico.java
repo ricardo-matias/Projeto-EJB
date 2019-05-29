@@ -44,12 +44,6 @@ public class DonoEstabelecimentoServico extends Servico<DonoEstabelecimento> {
         entityManager.persist(dono);
     }
     
-    @TransactionAttribute(SUPPORTS)
-    public DonoEstabelecimento consultarDonoPorId(@NotNull Long idDono) {
-        DonoEstabelecimento c = super.consultarPorId(idDono);
-        return c;
-    }
-    
     @Override
     public boolean existe(@NotNull DonoEstabelecimento entidade) {
         TypedQuery<DonoEstabelecimento> query
@@ -69,15 +63,8 @@ public class DonoEstabelecimentoServico extends Servico<DonoEstabelecimento> {
         return super.consultarEntidades(new Object[] {nome}, "DonoEstabelecimento.porNome");
     }
     
-    public List<DonoEstabelecimento> donoPorId(Long id) {
-        TypedQuery<DonoEstabelecimento> query 
-                = entityManager.createNamedQuery("DonoEstabelecimento.porId", DonoEstabelecimento.class);
-        query.setParameter("id", id);
-        return query.getResultList();
-    }
-    
     @TransactionAttribute(SUPPORTS)
-    public DonoEstabelecimento consultarPorIdDONO(Long id) {
-        return super.consultarEntidade(new Object[] {id}, "DonoEstabelecimento.porId");
-    }  
+    public DonoEstabelecimento donoPorCpf(@CPF String cpf) {
+        return super.consultarEntidade(new Object[] {cpf}, "DonoEstabelecimento.porCpf");
+    }    
 }

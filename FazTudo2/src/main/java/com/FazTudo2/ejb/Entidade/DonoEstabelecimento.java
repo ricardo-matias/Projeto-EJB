@@ -42,19 +42,15 @@ import org.hibernate.validator.constraints.br.CPF;
                     name = "DonoEstabelecimento.porNome",
                     query = "select d FROM DonoEstabelecimento d WHERE d.nome LIKE ?1 ORDER BY d.nome DESC"
             ),
-            @NamedQuery(
-                    name = "DonoEstabelecimento.porId",
-                    query = "select d FROM DonoEstabelecimento d WHERE d.id LIKE ?1 ORDER BY d.id DESC"
-            ),
             
             @NamedQuery(
                     name = "DonoEstabelecimento.porCpf",
-                    query = "select d FROM DonoEstabelecimento d WHERE d.cpf LIKE :cpf"
+                    query = "select d FROM DonoEstabelecimento d WHERE d.cpf LIKE ?1"
             )
         }
 )
 public class DonoEstabelecimento extends Usuario implements Serializable {
-    @CPF
+    @CPF(message="CPF inválido!")
     @NotBlank
     @Column(name = "txt_cpf", nullable = false, length = 15, unique = true)
     private String cpf;

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.FazTudo2.ejb.DonoEstabelecimentoTeste
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.168 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.375 sec

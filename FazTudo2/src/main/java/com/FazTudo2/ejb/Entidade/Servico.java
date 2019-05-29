@@ -49,7 +49,7 @@ public class Servico extends Entidade implements Serializable {
     @Column(name = "txt_nome", length = 100, nullable = false)
     private String nome;
 
-    //@ValidaPalavrao(message = "{exemplo.jpa.Servico.descricao}")
+    @ValidaPalavrao(message = "{exemplo.jpa.Servico.descricao}")
     @Column(name = "txt_descricao", length = 255, nullable = true)
     private String descricao;
 
