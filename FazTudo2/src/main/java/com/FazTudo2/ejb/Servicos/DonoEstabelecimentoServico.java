@@ -39,25 +39,15 @@ public class DonoEstabelecimentoServico extends Servico<DonoEstabelecimento> {
     public DonoEstabelecimento criar() {
         return new DonoEstabelecimento();
     }
-    
-    public void persistirDono(@Valid DonoEstabelecimento dono) {
-        entityManager.persist(dono);
-    }
-    
+     
     @Override
     public boolean existe(@NotNull DonoEstabelecimento entidade) {
         TypedQuery<DonoEstabelecimento> query
                 = entityManager.createNamedQuery("DonoEstabelecimento.porCpf", DonoEstabelecimento.class);
-        query.setParameter("cpf", entidade.getCpf());
+        query.setParameter(1, entidade.getCpf());
         return !query.getResultList().isEmpty();
     }
 
-    public DonoEstabelecimento atualizaDono(DonoEstabelecimento dono) {
-        dono = entityManager.merge(dono);
-        entityManager.flush();
-        return dono;
-    }    
-    
     @TransactionAttribute(SUPPORTS)
     public List<DonoEstabelecimento> donoPorNome(@NotBlank String nome) {
         return super.consultarEntidades(new Object[] {nome}, "DonoEstabelecimento.porNome");

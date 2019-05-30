@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="com.FazTudo2.ejb.CategoriaTeste" time="32.432" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="com.FazTudo2.ejb.CategoriaTeste" time="32.337" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="test" value="com.FazTudo2.ejb.CategoriaTeste"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/ricardo/NetBeansProjects/FazTudo2"/>
+    <property name="user.dir" value="/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2"/>
     <property name="java.runtime.version" value="1.8.0_212-8u212-b03-0ubuntu1.19.04.2-b03"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed"/>
@@ -61,9 +61,9 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.FazTudo2.ejb.CategoriaTeste" name="persistirCategoria" time="0.198"/>
+  <testcase classname="com.FazTudo2.ejb.CategoriaTeste" name="persistirCategoria" time="0.174"/>
   <testcase classname="com.FazTudo2.ejb.CategoriaTeste" name="atualizarCategoria" time="0.035"/>
   <testcase classname="com.FazTudo2.ejb.CategoriaTeste" name="consultarCategoriaPorNome" time="0.002"/>
-  <testcase classname="com.FazTudo2.ejb.CategoriaTeste" name="existeCategoria" time="0.002"/>
+  <testcase classname="com.FazTudo2.ejb.CategoriaTeste" name="existeCategoria" time="0.001"/>
   <testcase classname="com.FazTudo2.ejb.CategoriaTeste" name="consultarCategoriaPorId" time="0.002"/>
 </testsuite>

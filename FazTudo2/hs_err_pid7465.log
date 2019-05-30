@@ -1,0 +1,1200 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fd9f053180a, pid=7465, tid=0x00007fd9ecac1700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_212-b03) (build 1.8.0_212-8u212-b03-0ubuntu1.19.04.2-b03)
+# Java VM: OpenJDK 64-Bit Server VM (25.212-b03 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x98e80a]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fd9e813f000):  VMThread [stack: 0x00007fd9ec9c2000,0x00007fd9ecac2000] [id=7473]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007fd9f0494bf0, RBX=0x00007fd9edc1f178, RCX=0x000000000000ea6c, RDX=0x00007fd9effcb860
+RSP=0x00007fd9ecac06f0, RBP=0x00007fd9ecac0730, RSI=0x00007fd9ea8fa808, RDI=0x00007fd9ecac08f0
+R8 =0x00007fd9ecac0740, R9 =0x00007fff69de7080, R10=0x000000000020c614, R11=0x00000000000016a8
+R12=0x00007fd9ecac0740, R13=0x00007fd9f08516c0, R14=0x00007fd9ecac08f0, R15=0x0002000000000000
+RIP=0x00007fd9f053180a, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007fd9ecac06f0)
+0x00007fd9ecac06f0:   0000000000075368 0000000000031168
+0x00007fd9ecac0700:   00007fd9ecac0730 00007fd9ecac0740
+0x00007fd9ecac0710:   00007fd9ecac08d0 00007fd9ecac08a0
+0x00007fd9ecac0720:   00007fd9ecac08d0 00007fd9ecac0910
+0x00007fd9ecac0730:   00007fd9ecac0780 00007fd9f0531919
+0x00007fd9ecac0740:   00000000000012d3 0000000000000000
+0x00007fd9ecac0750:   0000000000000000 d742598117220a00
+0x00007fd9ecac0760:   00007fd9e8017140 00007fd9e8017140
+0x00007fd9ecac0770:   00007fd9ecac08a0 0000000000000004
+0x00007fd9ecac0780:   00007fd9ecac0aa0 00007fd9f0493c79
+0x00007fd9ecac0790:   0000000017f00000 00000000009137a0
+0x00007fd9ecac07a0:   000000001c79bd00 00000000000003d8
+0x00007fd9ecac07b0:   00007fd9ecac0960 00007fd9ecac0930
+0x00007fd9ecac07c0:   00007fd9ecac08b0 00007fd9ecac0890
+0x00007fd9ecac07d0:   00007fd9e804e968 00007fd9e804e590
+0x00007fd9ecac07e0:   00007fd9f0829548 00007fd9f084779c
+0x00007fd9ecac07f0:   00007fd9e813e500 00007fd9ecac08d0
+0x00007fd9ecac0800:   00007fd9e804e580 00007fd9e813c700
+0x00007fd9ecac0810:   00007fd9ad021d50 0000000089c9bd00
+0x00007fd9ecac0820:   00007fd9ecac08f0 00007fd9e801ce30
+0x00007fd9ecac0830:   00007fd9e8017570 00007fd9e8017600
+0x00007fd9ecac0840:   00007fd9ecac09a0 01007fd90000000e
+0x00007fd9ecac0850:   0000000000000000 0000000000000001
+0x00007fd9ecac0860:   0000000000006c5d 0000000000000000
+0x00007fd9ecac0870:   00000001a9f8aea4 00000001aa2e031a
+0x00007fd9ecac0880:   0000000000000000 00007fd9e80042bf
+0x00007fd9ecac0890:   0101010101010100 0000000eef850101
+0x00007fd9ecac08a0:   00007fd900000000 00007fd9e813c700
+0x00007fd9ecac08b0:   00007fd9ecac09e0 00007fd9ecac0100
+0x00007fd9ecac08c0:   0000000000000000 0000000000000000
+0x00007fd9ecac08d0:   00007fd900000000 0000000000000000
+0x00007fd9ecac08e0:   00007fd9f08517e0 00000001aa2e034f 
+
+Instructions: (pc=0x00007fd9f053180a)
+0x00007fd9f05317ea:   41 83 04 24 01 4c 8b 3b 4d 85 ff 74 3d 49 8b 45
+0x00007fd9f05317fa:   00 48 8d 15 5e a0 a9 ff 48 8b 00 48 39 d0 74 a6
+0x00007fd9f053180a:   49 8b 77 10 4c 89 ef ff d0 84 c0 74 bd 49 8b 06
+0x00007fd9f053181a:   49 8d 5f 08 49 8d 77 10 4c 89 f7 ff 10 41 83 04 
+
+Register to memory mapping:
+
+RAX=0x00007fd9f0494bf0: <offset 0x8f1bf0> in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007fd9efba3000
+RBX=0x00007fd9edc1f178 is an unknown value
+RCX=0x000000000000ea6c is an unknown value
+RDX=0x00007fd9effcb860: <offset 0x428860> in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007fd9efba3000
+RSP=0x00007fd9ecac06f0 is an unknown value
+RBP=0x00007fd9ecac0730 is an unknown value
+RSI=0x00007fd9ea8fa808 is an unknown value
+RDI=0x00007fd9ecac08f0 is an unknown value
+R8 =0x00007fd9ecac0740 is an unknown value
+R9 =0x00007fff69de7080 is an unknown value
+R10=0x000000000020c614 is an unknown value
+R11=0x00000000000016a8 is an unknown value
+R12=0x00007fd9ecac0740 is an unknown value
+R13=0x00007fd9f08516c0: <offset 0xcae6c0> in /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007fd9efba3000
+R14=0x00007fd9ecac08f0 is an unknown value
+R15=0x0002000000000000 is an unknown value
+
+
+Stack: [0x00007fd9ec9c2000,0x00007fd9ecac2000],  sp=0x00007fd9ecac06f0,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x98e80a]
+V  [libjvm.so+0x98e919]
+V  [libjvm.so+0x8f0c79]
+V  [libjvm.so+0x8f187c]
+V  [libjvm.so+0x8a4b59]
+V  [libjvm.so+0xa208f6]
+V  [libjvm.so+0xa25d16]
+V  [libjvm.so+0xa237d7]
+V  [libjvm.so+0xa24a7c]
+V  [libjvm.so+0xa24cd7]
+V  [libjvm.so+0x880ce2]
+
+VM_Operation (0x00007fd9ef8553d0): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x00007fd9e800a800
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fd9e8328000 JavaThread "AutoDeployer" daemon [_thread_blocked, id=7509, stack(0x00007fd986af1000,0x00007fd986bf2000)]
+  0x00007fd9e972b800 JavaThread "PingService" daemon [_thread_blocked, id=7508, stack(0x00007fd986bf2000,0x00007fd986cf3000)]
+  0x00007fd9e9729800 JavaThread "pool-9-thread-1" daemon [_thread_blocked, id=7506, stack(0x00007fd986cf3000,0x00007fd986df4000)]
+  0x00007fd9e9728000 JavaThread "Thread-15" daemon [_thread_blocked, id=7505, stack(0x00007fd9871f8000,0x00007fd9872f9000)]
+  0x00007fd9e9726000 JavaThread "RunLevelControllerThread-1559175018585" daemon [_thread_blocked, id=7504, stack(0x00007fd986df4000,0x00007fd986ef5000)]
+  0x00007fd9e9724800 JavaThread "RunLevelControllerThread-1559175018580" daemon [_thread_blocked, id=7503, stack(0x00007fd986ef5000,0x00007fd986ff6000)]
+  0x00007fd9e9723000 JavaThread "RunLevelControllerThread-1559175018579" daemon [_thread_blocked, id=7502, stack(0x00007fd986ff6000,0x00007fd9870f7000)]
+  0x00007fd9e8882800 JavaThread "RunLevelControllerThread-1559175018578" daemon [_thread_blocked, id=7501, stack(0x00007fd9870f7000,0x00007fd9871f8000)]
+  0x00007fd9e8e31800 JavaThread "RunLevelControllerThread-1559175018578" daemon [_thread_blocked, id=7500, stack(0x00007fd9876f9000,0x00007fd9877fa000)]
+  0x00007fd9e8886000 JavaThread "RunLevelControllerThread-1559175018577" daemon [_thread_blocked, id=7499, stack(0x00007fd9878fb000,0x00007fd9879fc000)]
+  0x00007fd9e8e69800 JavaThread "PingService" daemon [_thread_blocked, id=7496, stack(0x00007fd9877fa000,0x00007fd9878fb000)]
+  0x00007fd9ea841000 JavaThread "pool-8-thread-1" daemon [_thread_blocked, id=7491, stack(0x00007fd9879fc000,0x00007fd987afd000)]
+  0x00007fd9ea83f000 JavaThread "pool-7-thread-1" daemon [_thread_blocked, id=7490, stack(0x00007fd987afd000,0x00007fd987bfe000)]
+  0x00007fd9ea819800 JavaThread "Thread-2" daemon [_thread_blocked, id=7489, stack(0x00007fd987dfe000,0x00007fd987eff000)]
+  0x00007fd994002800 JavaThread "pool-5-thread-1" daemon [_thread_blocked, id=7488, stack(0x00007fd987eff000,0x00007fd988000000)]
+  0x00007fd988001000 JavaThread "pool-6-thread-1" daemon [_thread_blocked, id=7487, stack(0x00007fd9a00c6000,0x00007fd9a01c7000)]
+  0x00007fd990003000 JavaThread "pool-4-thread-1" daemon [_thread_blocked, id=7486, stack(0x00007fd9a01c7000,0x00007fd9a02c8000)]
+  0x00007fd9ea7ce800 JavaThread "pool-3-thread-1" daemon [_thread_blocked, id=7485, stack(0x00007fd9a02c8000,0x00007fd9a03c9000)]
+  0x00007fd9ea7ca000 JavaThread "pool-2-thread-1" daemon [_thread_blocked, id=7484, stack(0x00007fd9a03c9000,0x00007fd9a04ca000)]
+  0x00007fd9ea7cc000 JavaThread "pool-1-thread-1" daemon [_thread_blocked, id=7483, stack(0x00007fd9a04ca000,0x00007fd9a05cb000)]
+  0x00007fd9ea611000 JavaThread "Timer-0" daemon [_thread_blocked, id=7482, stack(0x00007fd9a09cb000,0x00007fd9a0acc000)]
+  0x00007fd9e818e800 JavaThread "Service Thread" daemon [_thread_blocked, id=7480, stack(0x00007fd9ec2ba000,0x00007fd9ec3bb000)]
+  0x00007fd9e8183800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=7479, stack(0x00007fd9ec3bc000,0x00007fd9ec4bc000)]
+  0x00007fd9e8181800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=7478, stack(0x00007fd9ec4bd000,0x00007fd9ec5bd000)]
+  0x00007fd9e817f000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=7477, stack(0x00007fd9ec5be000,0x00007fd9ec6be000)]
+  0x00007fd9e817d800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7476, stack(0x00007fd9ec6be000,0x00007fd9ec7bf000)]
+  0x00007fd9e814b000 JavaThread "Finalizer" daemon [_thread_blocked, id=7475, stack(0x00007fd9ec7bf000,0x00007fd9ec8c0000)]
+  0x00007fd9e8148800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7474, stack(0x00007fd9ec8c0000,0x00007fd9ec9c1000)]
+  0x00007fd9e800a800 JavaThread "main" [_thread_blocked, id=7468, stack(0x00007fd9ef75a000,0x00007fd9ef85a000)]
+
+Other Threads:
+=>0x00007fd9e813f000 VMThread [stack: 0x00007fd9ec9c2000,0x00007fd9ecac2000] [id=7473]
+  0x00007fd9e8191000 WatcherThread [stack: 0x00007fd9ec1ba000,0x00007fd9ec2ba000] [id=7481]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007fd9e8007da0] Threads_lock - owner thread: 0x00007fd9e813f000
+[0x00007fd9e80082a0] Heap_lock - owner thread: 0x00007fd9e800a800
+
+heap address: 0x0000000085400000, size: 1964 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 427008K, used 392192K [0x00000000d7180000, 0x00000000f5a00000, 0x0000000100000000)
+  eden space 392192K, 100% used [0x00000000d7180000,0x00000000ef080000,0x00000000ef080000)
+  from space 34816K, 0% used [0x00000000f2300000,0x00000000f2300000,0x00000000f4500000)
+  to   space 51712K, 76% used [0x00000000ef080000,0x00000000f16e2698,0x00000000f2300000)
+ ParOldGen       total 163328K, used 74359K [0x0000000085400000, 0x000000008f380000, 0x00000000d7180000)
+  object space 163328K, 45% used [0x0000000085400000,0x0000000089c9dd00,0x000000008f380000)
+ Metaspace       used 23187K, capacity 23580K, committed 23808K, reserved 1071104K
+  class space    used 2655K, capacity 2734K, committed 2816K, reserved 1048576K
+
+Card table byte_map: [0x00007fd9eef4f000,0x00007fd9ef326000] byte_map_base: 0x00007fd9eeb25000
+
+Marking Bits: (ParMarkBitMap*) 0x00007fd9f08513a0
+ Begin Bits: [0x00007fd9c82a0000, 0x00007fd9ca150000)
+ End Bits:   [0x00007fd9ca150000, 0x00007fd9cc000000)
+
+Polling page: 0x00007fd9f0aaf000
+
+CodeCache: size=245760Kb used=11141Kb max_used=11159Kb free=234618Kb
+ bounds [0x00007fd9d9000000, 0x00007fd9d9b00000, 0x00007fd9e8000000]
+ total_blobs=3472 nmethods=3070 adapters=315
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 7,057 Thread 0x00007fd9e817f000 3131       4       com.sun.enterprise.deployment.deploy.shared.InputJarArchive::getEntrySize (27 bytes)
+Event: 7,057 Thread 0x00007fd9e8181800 3132   !   4       com.sun.enterprise.util.io.FileUtils::copy (172 bytes)
+Event: 7,059 Thread 0x00007fd9e817f000 nmethod 3131 0x00007fd9d9aac550 code [0x00007fd9d9aac6c0, 0x00007fd9d9aac968]
+Event: 7,059 Thread 0x00007fd9e817f000 3135   !   4       java.nio.channels.Channels$WritableByteChannelImpl::write (136 bytes)
+Event: 7,073 Thread 0x00007fd9e817f000 nmethod 3135 0x00007fd9d9ac8f10 code [0x00007fd9d9ac9140, 0x00007fd9d9aca6f0]
+Event: 7,073 Thread 0x00007fd9e817f000 3133       4       java.nio.channels.Channels::newChannel (42 bytes)
+Event: 7,075 Thread 0x00007fd9e817f000 nmethod 3133 0x00007fd9d9aabf10 code [0x00007fd9d9aac080, 0x00007fd9d9aac358]
+Event: 7,075 Thread 0x00007fd9e817f000 3134       4       com.sun.enterprise.deploy.shared.FileArchive::closeEntry (27 bytes)
+Event: 7,084 Thread 0x00007fd9e817f000 nmethod 3134 0x00007fd9d9abbd90 code [0x00007fd9d9abbf80, 0x00007fd9d9abced0]
+Event: 7,086 Thread 0x00007fd9e8181800 nmethod 3132 0x00007fd9d9af1a10 code [0x00007fd9d9af1ce0, 0x00007fd9d9af3b20]
+
+GC Heap History (10 events):
+Event: 2,069 GC heap after
+Heap after GC invocations=6 (full 0):
+ PSYoungGen      total 272384K, used 6453K [0x00000000d7180000, 0x00000000e8e80000, 0x0000000100000000)
+  eden space 253952K, 0% used [0x00000000d7180000,0x00000000d7180000,0x00000000e6980000)
+  from space 18432K, 35% used [0x00000000e7c80000,0x00000000e82cd600,0x00000000e8e80000)
+  to   space 18944K, 0% used [0x00000000e6980000,0x00000000e6980000,0x00000000e7c00000)
+ ParOldGen       total 84992K, used 24935K [0x0000000085400000, 0x000000008a700000, 0x00000000d7180000)
+  object space 84992K, 29% used [0x0000000085400000,0x0000000086c59fb0,0x000000008a700000)
+ Metaspace       used 20659K, capacity 20994K, committed 21248K, reserved 1069056K
+  class space    used 2393K, capacity 2463K, committed 2560K, reserved 1048576K
+}
+Event: 2,069 GC heap before
+{Heap before GC invocations=7 (full 1):
+ PSYoungGen      total 272384K, used 6453K [0x00000000d7180000, 0x00000000e8e80000, 0x0000000100000000)
+  eden space 253952K, 0% used [0x00000000d7180000,0x00000000d7180000,0x00000000e6980000)
+  from space 18432K, 35% used [0x00000000e7c80000,0x00000000e82cd600,0x00000000e8e80000)
+  to   space 18944K, 0% used [0x00000000e6980000,0x00000000e6980000,0x00000000e7c00000)
+ ParOldGen       total 84992K, used 24935K [0x0000000085400000, 0x000000008a700000, 0x00000000d7180000)
+  object space 84992K, 29% used [0x0000000085400000,0x0000000086c59fb0,0x000000008a700000)
+ Metaspace       used 20659K, capacity 20994K, committed 21248K, reserved 1069056K
+  class space    used 2393K, capacity 2463K, committed 2560K, reserved 1048576K
+Event: 2,136 GC heap after
+Heap after GC invocations=7 (full 1):
+ PSYoungGen      total 272384K, used 0K [0x00000000d7180000, 0x00000000e8e80000, 0x0000000100000000)
+  eden space 253952K, 0% used [0x00000000d7180000,0x00000000d7180000,0x00000000e6980000)
+  from space 18432K, 0% used [0x00000000e7c80000,0x00000000e7c80000,0x00000000e8e80000)
+  to   space 18944K, 0% used [0x00000000e6980000,0x00000000e6980000,0x00000000e7c00000)
+ ParOldGen       total 82432K, used 25724K [0x0000000085400000, 0x000000008a480000, 0x00000000d7180000)
+  object space 82432K, 31% used [0x0000000085400000,0x0000000086d1f158,0x000000008a480000)
+ Metaspace       used 20659K, capacity 20994K, committed 21248K, reserved 1069056K
+  class space    used 2393K, capacity 2463K, committed 2560K, reserved 1048576K
+}
+Event: 2,641 GC heap before
+{Heap before GC invocations=8 (full 1):
+ PSYoungGen      total 272384K, used 253952K [0x00000000d7180000, 0x00000000e8e80000, 0x0000000100000000)
+  eden space 253952K, 100% used [0x00000000d7180000,0x00000000e6980000,0x00000000e6980000)
+  from space 18432K, 0% used [0x00000000e7c80000,0x00000000e7c80000,0x00000000e8e80000)
+  to   space 18944K, 0% used [0x00000000e6980000,0x00000000e6980000,0x00000000e7c00000)
+ ParOldGen       total 82432K, used 25724K [0x0000000085400000, 0x000000008a480000, 0x00000000d7180000)
+  object space 82432K, 31% used [0x0000000085400000,0x0000000086d1f158,0x000000008a480000)
+ Metaspace       used 22196K, capacity 22590K, committed 22912K, reserved 1069056K
+  class space    used 2538K, capacity 2601K, committed 2688K, reserved 1048576K
+Event: 2,666 GC heap after
+Heap after GC invocations=8 (full 1):
+ PSYoungGen      total 272896K, used 18941K [0x00000000d7180000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 253952K, 0% used [0x00000000d7180000,0x00000000d7180000,0x00000000e6980000)
+  from space 18944K, 99% used [0x00000000e6980000,0x00000000e7bff480,0x00000000e7c00000)
+  to   space 34816K, 0% used [0x00000000f2300000,0x00000000f2300000,0x00000000f4500000)
+ ParOldGen       total 82432K, used 50373K [0x0000000085400000, 0x000000008a480000, 0x00000000d7180000)
+  object space 82432K, 61% used [0x0000000085400000,0x0000000088531718,0x000000008a480000)
+ Metaspace       used 22196K, capacity 22590K, committed 22912K, reserved 1069056K
+  class space    used 2538K, capacity 2601K, committed 2688K, reserved 1048576K
+}
+Event: 6,464 GC heap before
+{Heap before GC invocations=9 (full 1):
+ PSYoungGen      total 272896K, used 272893K [0x00000000d7180000, 0x00000000f4500000, 0x0000000100000000)
+  eden space 253952K, 100% used [0x00000000d7180000,0x00000000e6980000,0x00000000e6980000)
+  from space 18944K, 99% used [0x00000000e6980000,0x00000000e7bff480,0x00000000e7c00000)
+  to   space 34816K, 0% used [0x00000000f2300000,0x00000000f2300000,0x00000000f4500000)
+ ParOldGen       total 82432K, used 50373K [0x0000000085400000, 0x000000008a480000, 0x00000000d7180000)
+  object space 82432K, 61% used [0x0000000085400000,0x0000000088531718,0x000000008a480000)
+ Metaspace       used 23142K, capacity 23580K, committed 23808K, reserved 1071104K
+  class space    used 2655K, capacity 2734K, committed 2816K, reserved 1048576K
+Event: 6,517 GC heap after
+Heap after GC invocations=9 (full 1):
+ PSYoungGen      total 427008K, used 34791K [0x00000000d7180000, 0x00000000f5a00000, 0x0000000100000000)
+  eden space 392192K, 0% used [0x00000000d7180000,0x00000000d7180000,0x00000000ef080000)
+  from space 34816K, 99% used [0x00000000f2300000,0x00000000f44f9c10,0x00000000f4500000)
+  to   space 51712K, 0% used [0x00000000ef080000,0x00000000ef080000,0x00000000f2300000)
+ ParOldGen       total 82432K, used 74501K [0x0000000085400000, 0x000000008a480000, 0x00000000d7180000)
+  object space 82432K, 90% used [0x0000000085400000,0x0000000089cc1718,0x000000008a480000)
+ Metaspace       used 23142K, capacity 23580K, committed 23808K, reserved 1071104K
+  class space    used 2655K, capacity 2734K, committed 2816K, reserved 1048576K
+}
+Event: 6,517 GC heap before
+{Heap before GC invocations=10 (full 2):
+ PSYoungGen      total 427008K, used 34791K [0x00000000d7180000, 0x00000000f5a00000, 0x0000000100000000)
+  eden space 392192K, 0% used [0x00000000d7180000,0x00000000d7180000,0x00000000ef080000)
+  from space 34816K, 99% used [0x00000000f2300000,0x00000000f44f9c10,0x00000000f4500000)
+  to   space 51712K, 0% used [0x00000000ef080000,0x00000000ef080000,0x00000000f2300000)
+ ParOldGen       total 82432K, used 74501K [0x0000000085400000, 0x000000008a480000, 0x00000000d7180000)
+  object space 82432K, 90% used [0x0000000085400000,0x0000000089cc1718,0x000000008a480000)
+ Metaspace       used 23142K, capacity 23580K, committed 23808K, reserved 1071104K
+  class space    used 2655K, capacity 2734K, committed 2816K, reserved 1048576K
+Event: 6,601 GC heap after
+Heap after GC invocations=10 (full 2):
+ PSYoungGen      total 427008K, used 0K [0x00000000d7180000, 0x00000000f5a00000, 0x0000000100000000)
+  eden space 392192K, 0% used [0x00000000d7180000,0x00000000d7180000,0x00000000ef080000)
+  from space 34816K, 0% used [0x00000000f2300000,0x00000000f2300000,0x00000000f4500000)
+  to   space 51712K, 0% used [0x00000000ef080000,0x00000000ef080000,0x00000000f2300000)
+ ParOldGen       total 163328K, used 74351K [0x0000000085400000, 0x000000008f380000, 0x00000000d7180000)
+  object space 163328K, 45% used [0x0000000085400000,0x0000000089c9bd00,0x000000008f380000)
+ Metaspace       used 23142K, capacity 23580K, committed 23808K, reserved 1071104K
+  class space    used 2655K, capacity 2734K, committed 2816K, reserved 1048576K
+}
+Event: 7,147 GC heap before
+{Heap before GC invocations=11 (full 2):
+ PSYoungGen      total 427008K, used 392192K [0x00000000d7180000, 0x00000000f5a00000, 0x0000000100000000)
+  eden space 392192K, 100% used [0x00000000d7180000,0x00000000ef080000,0x00000000ef080000)
+  from space 34816K, 0% used [0x00000000f2300000,0x00000000f2300000,0x00000000f4500000)
+  to   space 51712K, 0% used [0x00000000ef080000,0x00000000ef080000,0x00000000f2300000)
+ ParOldGen       total 163328K, used 74351K [0x0000000085400000, 0x000000008f380000, 0x00000000d7180000)
+  object space 163328K, 45% used [0x0000000085400000,0x0000000089c9bd00,0x000000008f380000)
+ Metaspace       used 23187K, capacity 23580K, committed 23808K, reserved 1071104K
+  class space    used 2655K, capacity 2734K, committed 2816K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 6,450 Thread 0x00007fd9e800a800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd9d99c0804 method=java.io.BufferedInputStream.close()V @ 36
+Event: 6,450 Thread 0x00007fd9e800a800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fd9d99c88d8 method=java.io.BufferedInputStream.fill()V @ 214
+Event: 6,450 Thread 0x00007fd9e800a800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd9d99c0804 method=java.io.BufferedInputStream.close()V @ 36
+Event: 6,451 Thread 0x00007fd9e800a800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fd9d99b4930 method=java.io.BufferedInputStream.fill()V @ 214
+Event: 6,451 Thread 0x00007fd9e800a800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007fd9d99b42cc method=java.io.BufferedInputStream.fill()V @ 214
+Event: 6,454 Thread 0x00007fd9e800a800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd9d99be364 method=java.io.BufferedInputStream.available()I @ 14
+Event: 6,603 Thread 0x00007fd9e800a800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd9d99be364 method=java.io.BufferedInputStream.available()I @ 14
+Event: 6,605 Thread 0x00007fd9e800a800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd9d99be364 method=java.io.BufferedInputStream.available()I @ 14
+Event: 6,606 Thread 0x00007fd9e800a800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fd9d99be364 method=java.io.BufferedInputStream.available()I @ 14
+Event: 6,627 Thread 0x00007fd9e814b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fd9d99998a4 method=java.util.ArrayDeque.addLast(Ljava/lang/Object;)V @ 45
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 4,269 Thread 0x00007fd9e8328000 Implicit null exception at 0x00007fd9d97ebbdf to 0x00007fd9d97ec281
+Event: 6,287 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b7f198) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,287 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b7f590) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,287 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b80e60) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,287 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b81258) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,288 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b91fa8) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,288 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b923a0) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,288 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b93c70) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,288 Thread 0x00007fd9e800a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000e4b94068) thrown at [/build/openjdk-8-Pu9rhK/openjdk-8-8u212-b03/src/hotspot/src/share/vm/prims/jvm.cpp, line 1502]
+Event: 6,294 Thread 0x00007fd9e800a800 Implicit null exception at 0x00007fd9d97702dd to 0x00007fd9d9773289
+
+Events (10 events):
+Event: 6,635 Executing VM operation: RevokeBias done
+Event: 6,635 Executing VM operation: RevokeBias
+Event: 6,635 Executing VM operation: RevokeBias done
+Event: 6,635 Executing VM operation: RevokeBias
+Event: 6,635 Executing VM operation: RevokeBias done
+Event: 6,635 Executing VM operation: RevokeBias
+Event: 6,636 Executing VM operation: RevokeBias done
+Event: 6,636 Executing VM operation: RevokeBias
+Event: 6,636 Executing VM operation: RevokeBias done
+Event: 7,146 Executing VM operation: ParallelGCFailedAllocation
+
+
+Dynamic libraries:
+85400000-8f380000 rw-p 00000000 00:00 0 
+8f380000-d7180000 ---p 00000000 00:00 0 
+d7180000-f5a00000 rw-p 00000000 00:00 0 
+f5a00000-100000000 ---p 00000000 00:00 0 
+100000000-1002c0000 rw-p 00000000 00:00 0 
+1002c0000-140000000 ---p 00000000 00:00 0 
+55a1b525c000-55a1b525d000 r--p 00000000 08:07 2885405                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+55a1b525d000-55a1b525e000 r-xp 00001000 08:07 2885405                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+55a1b525e000-55a1b525f000 r--p 00002000 08:07 2885405                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+55a1b525f000-55a1b5260000 r--p 00002000 08:07 2885405                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+55a1b5260000-55a1b5261000 rw-p 00003000 08:07 2885405                    /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+55a1b5dd3000-55a1b5df4000 rw-p 00000000 00:00 0                          [heap]
+7fd930000000-7fd934779000 rw-p 00000000 00:00 0 
+7fd934779000-7fd938000000 ---p 00000000 00:00 0 
+7fd938000000-7fd93bffd000 rw-p 00000000 00:00 0 
+7fd93bffd000-7fd93c000000 ---p 00000000 00:00 0 
+7fd93c000000-7fd93fffd000 rw-p 00000000 00:00 0 
+7fd93fffd000-7fd940000000 ---p 00000000 00:00 0 
+7fd940000000-7fd943ffd000 rw-p 00000000 00:00 0 
+7fd943ffd000-7fd944000000 ---p 00000000 00:00 0 
+7fd944000000-7fd947ffc000 rw-p 00000000 00:00 0 
+7fd947ffc000-7fd948000000 ---p 00000000 00:00 0 
+7fd948000000-7fd94fff9000 rw-p 00000000 00:00 0 
+7fd94fff9000-7fd950000000 ---p 00000000 00:00 0 
+7fd950000000-7fd950021000 rw-p 00000000 00:00 0 
+7fd950021000-7fd954000000 ---p 00000000 00:00 0 
+7fd954000000-7fd957fff000 rw-p 00000000 00:00 0 
+7fd957fff000-7fd958000000 ---p 00000000 00:00 0 
+7fd958000000-7fd958021000 rw-p 00000000 00:00 0 
+7fd958021000-7fd95c000000 ---p 00000000 00:00 0 
+7fd95c000000-7fd95c021000 rw-p 00000000 00:00 0 
+7fd95c021000-7fd960000000 ---p 00000000 00:00 0 
+7fd960000000-7fd960021000 rw-p 00000000 00:00 0 
+7fd960021000-7fd964000000 ---p 00000000 00:00 0 
+7fd964000000-7fd964021000 rw-p 00000000 00:00 0 
+7fd964021000-7fd968000000 ---p 00000000 00:00 0 
+7fd968000000-7fd968021000 rw-p 00000000 00:00 0 
+7fd968021000-7fd96c000000 ---p 00000000 00:00 0 
+7fd96c000000-7fd96c021000 rw-p 00000000 00:00 0 
+7fd96c021000-7fd970000000 ---p 00000000 00:00 0 
+7fd970000000-7fd970021000 rw-p 00000000 00:00 0 
+7fd970021000-7fd974000000 ---p 00000000 00:00 0 
+7fd974000000-7fd974021000 rw-p 00000000 00:00 0 
+7fd974021000-7fd978000000 ---p 00000000 00:00 0 
+7fd978000000-7fd978021000 rw-p 00000000 00:00 0 
+7fd978021000-7fd97c000000 ---p 00000000 00:00 0 
+7fd97c000000-7fd97c021000 rw-p 00000000 00:00 0 
+7fd97c021000-7fd980000000 ---p 00000000 00:00 0 
+7fd980000000-7fd980021000 rw-p 00000000 00:00 0 
+7fd980021000-7fd984000000 ---p 00000000 00:00 0 
+7fd986667000-7fd9867f0000 r--s 00f4b000 08:07 2359769                    /tmp/classes.jar
+7fd9867f0000-7fd986870000 rw-p 00000000 00:00 0 
+7fd986870000-7fd9869f3000 ---p 00000000 00:00 0 
+7fd9869f3000-7fd986af1000 rw-p 00000000 00:00 0 
+7fd986af1000-7fd986af4000 ---p 00000000 00:00 0 
+7fd986af4000-7fd986bf2000 rw-p 00000000 00:00 0 
+7fd986bf2000-7fd986bf5000 ---p 00000000 00:00 0 
+7fd986bf5000-7fd986cf3000 rw-p 00000000 00:00 0 
+7fd986cf3000-7fd986cf6000 ---p 00000000 00:00 0 
+7fd986cf6000-7fd986df4000 rw-p 00000000 00:00 0 
+7fd986df4000-7fd986df7000 ---p 00000000 00:00 0 
+7fd986df7000-7fd986ef5000 rw-p 00000000 00:00 0 
+7fd986ef5000-7fd986ef8000 ---p 00000000 00:00 0 
+7fd986ef8000-7fd986ff6000 rw-p 00000000 00:00 0 
+7fd986ff6000-7fd986ff9000 ---p 00000000 00:00 0 
+7fd986ff9000-7fd9870f7000 rw-p 00000000 00:00 0 
+7fd9870f7000-7fd9870fa000 ---p 00000000 00:00 0 
+7fd9870fa000-7fd9871f8000 rw-p 00000000 00:00 0 
+7fd9871f8000-7fd9871fb000 ---p 00000000 00:00 0 
+7fd9871fb000-7fd9874f9000 rw-p 00000000 00:00 0 
+7fd9874f9000-7fd9876f9000 rw-p 00000000 00:00 0 
+7fd9876f9000-7fd9876fc000 ---p 00000000 00:00 0 
+7fd9876fc000-7fd9877fa000 rw-p 00000000 00:00 0 
+7fd9877fa000-7fd9877fd000 ---p 00000000 00:00 0 
+7fd9877fd000-7fd9878fb000 rw-p 00000000 00:00 0 
+7fd9878fb000-7fd9878fe000 ---p 00000000 00:00 0 
+7fd9878fe000-7fd9879fc000 rw-p 00000000 00:00 0 
+7fd9879fc000-7fd9879ff000 ---p 00000000 00:00 0 
+7fd9879ff000-7fd987afd000 rw-p 00000000 00:00 0 
+7fd987afd000-7fd987b00000 ---p 00000000 00:00 0 
+7fd987b00000-7fd987dfe000 rw-p 00000000 00:00 0 
+7fd987dfe000-7fd987e01000 ---p 00000000 00:00 0 
+7fd987e01000-7fd987eff000 rw-p 00000000 00:00 0 
+7fd987eff000-7fd987f02000 ---p 00000000 00:00 0 
+7fd987f02000-7fd988000000 rw-p 00000000 00:00 0 
+7fd988000000-7fd988021000 rw-p 00000000 00:00 0 
+7fd988021000-7fd98c000000 ---p 00000000 00:00 0 
+7fd98c000000-7fd98c021000 rw-p 00000000 00:00 0 
+7fd98c021000-7fd990000000 ---p 00000000 00:00 0 
+7fd990000000-7fd990021000 rw-p 00000000 00:00 0 
+7fd990021000-7fd994000000 ---p 00000000 00:00 0 
+7fd994000000-7fd994021000 rw-p 00000000 00:00 0 
+7fd994021000-7fd998000000 ---p 00000000 00:00 0 
+7fd998000000-7fd998021000 rw-p 00000000 00:00 0 
+7fd998021000-7fd99c000000 ---p 00000000 00:00 0 
+7fd99c000000-7fd99c021000 rw-p 00000000 00:00 0 
+7fd99c021000-7fd9a0000000 ---p 00000000 00:00 0 
+7fd9a00c6000-7fd9a00c9000 ---p 00000000 00:00 0 
+7fd9a00c9000-7fd9a01c7000 rw-p 00000000 00:00 0 
+7fd9a01c7000-7fd9a01ca000 ---p 00000000 00:00 0 
+7fd9a01ca000-7fd9a02c8000 rw-p 00000000 00:00 0 
+7fd9a02c8000-7fd9a02cb000 ---p 00000000 00:00 0 
+7fd9a02cb000-7fd9a03c9000 rw-p 00000000 00:00 0 
+7fd9a03c9000-7fd9a03cc000 ---p 00000000 00:00 0 
+7fd9a03cc000-7fd9a04ca000 rw-p 00000000 00:00 0 
+7fd9a04ca000-7fd9a04cd000 ---p 00000000 00:00 0 
+7fd9a04cd000-7fd9a07cb000 rw-p 00000000 00:00 0 
+7fd9a07cb000-7fd9a09cb000 rw-p 00000000 00:00 0 
+7fd9a09cb000-7fd9a09ce000 ---p 00000000 00:00 0 
+7fd9a09ce000-7fd9a0ccc000 rw-p 00000000 00:00 0 
+7fd9a0ccc000-7fd9a0cce000 r--s 0000b000 08:07 2633485                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-updatecenter-plugin.jar
+7fd9a0cce000-7fd9a0cd0000 r--s 00004000 08:07 2633525                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-media-json-jackson.jar
+7fd9a0cd0000-7fd9a0cd3000 r--s 0002a000 08:07 2634171                    /home/ricardo/glassfish-4.1.1/glassfish/modules/admin-cli.jar
+7fd9a0cd3000-7fd9a0cd6000 r--s 00016000 08:07 2633866                    /home/ricardo/glassfish-4.1.1/glassfish/modules/deployment-client.jar
+7fd9a0cd6000-7fd9a0cd8000 r--s 00005000 08:07 2633426                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-container-grizzly2-http.jar
+7fd9a0cd8000-7fd9a0cda000 r--s 0002d000 08:07 2633907                    /home/ricardo/glassfish-4.1.1/glassfish/modules/deployment-admin.jar
+7fd9a0cda000-7fd9a0cdf000 r--s 0002f000 08:07 2633727                    /home/ricardo/glassfish-4.1.1/glassfish/modules/appclient-server-core.jar
+7fd9a0d60000-7fd9a0d61000 r--s 00005000 08:07 2633976                    /home/ricardo/glassfish-4.1.1/glassfish/modules/osgi-container.jar
+7fd9a0d61000-7fd9a0d63000 r--s 00002000 08:07 2634014                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ha-file-store.jar
+7fd9a0d63000-7fd9a0d65000 r--s 00000000 08:07 2633471                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-extra-jre-packages.jar
+7fd9a0d65000-7fd9a0d67000 r--s 00005000 08:07 2633698                    /home/ricardo/glassfish-4.1.1/glassfish/modules/inmemory.jacc.provider.jar
+7fd9a0d67000-7fd9a0d68000 r--s 00003000 08:07 2633957                    /home/ricardo/glassfish-4.1.1/glassfish/modules/osgi-cli-remote.jar
+7fd9a0d68000-7fd9a0d69000 r--s 00000000 08:07 2633440                    /home/ricardo/glassfish-4.1.1/glassfish/modules/flashlight-extra-jdk-packages.jar
+7fd9a0d69000-7fd9a0d6b000 r--s 0001a000 08:07 2633792                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-jdbc-plugin.jar
+7fd9a0d6b000-7fd9a0d6d000 r--s 00008000 08:07 2633692                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-bean-validation.jar
+7fd9a0d6d000-7fd9a0d6f000 r--s 00006000 08:07 2634131                    /home/ricardo/glassfish-4.1.1/glassfish/modules/acc-config.jar
+7fd9a0da3000-7fd9a0db6000 r--s 00346000 08:07 2886286                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+7fd9a0db6000-7fd9a0dba000 r--p 00000000 08:07 2886234                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fd9a0dba000-7fd9a0dbe000 r-xp 00004000 08:07 2886234                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fd9a0dbe000-7fd9a0dc0000 r--p 00008000 08:07 2886234                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fd9a0dc0000-7fd9a0dc1000 r--p 00009000 08:07 2886234                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fd9a0dc1000-7fd9a0dc2000 rw-p 0000a000 08:07 2886234                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7fd9a0dc2000-7fd9a0dc9000 r--s 00000000 08:07 3540130                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7fd9a0dc9000-7fd9a0def000 r--p 00000000 08:07 398410                     /usr/share/locale-langpack/pt_BR/LC_MESSAGES/libc.mo
+7fd9a0def000-7fd9a0df4000 r--s 0006a000 08:07 2635287                    /home/ricardo/glassfish-4.1.1/glassfish/lib/org-netbeans-modules-db-mysql.jar
+7fd9a0df4000-7fd9a0dfc000 r--s 000c4000 08:07 2635286                    /home/ricardo/glassfish-4.1.1/glassfish/lib/mysql-connector-java-5.1.23-bin.jar
+7fd9a0dfc000-7fd9a0dfd000 r--s 00000000 08:07 2634072                    /home/ricardo/glassfish-4.1.1/glassfish/lib/jndi-properties.jar
+7fd9a0dfd000-7fd9a0dfe000 r--s 00008000 08:07 2634276                    /home/ricardo/glassfish-4.1.1/glassfish/modules/backup.jar
+7fd9a0dfe000-7fd9a0e01000 r--s 00012000 08:07 2634043                    /home/ricardo/glassfish-4.1.1/glassfish/modules/osgi-adapter.jar
+7fd9a0e01000-7fd9a0e05000 r--s 0003c000 08:07 2633835                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-web-plugin.jar
+7fd9a0e05000-7fd9a0e07000 r--s 0000c000 08:07 2633732                    /home/ricardo/glassfish-4.1.1/glassfish/modules/deployment-autodeploy.jar
+7fd9a0e07000-7fd9a0e09000 r--s 00001000 08:07 2633844                    /home/ricardo/glassfish-4.1.1/glassfish/modules/osgi-jpa-extension.jar
+7fd9a0e09000-7fd9a0e0d000 r--s 00022000 08:07 2633795                    /home/ricardo/glassfish-4.1.1/glassfish/modules/load-balancer-admin.jar
+7fd9a0e0d000-7fd9a0e0e000 r--s 00006000 08:07 2633501                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-load-balancer-connector.jar
+7fd9a0e0e000-7fd9a0e0f000 r--s 00004000 08:07 2633828                    /home/ricardo/glassfish-4.1.1/glassfish/modules/appclient.security.jar
+7fd9a0e0f000-7fd9a0e10000 r--s 00003000 08:07 2633486                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jackson-jaxrs-json-provider.jar
+7fd9a0e10000-7fd9a0e14000 r--s 00025000 08:07 2634094                    /home/ricardo/glassfish-4.1.1/glassfish/modules/shoal-cache.jar
+7fd9a0e14000-7fd9a0e15000 r--s 00001000 08:07 2633756                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ha-shoal-cache-store.jar
+7fd9a0e15000-7fd9a0e1a000 r--s 0003e000 08:07 2633688                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-cluster-plugin.jar
+7fd9a0e1a000-7fd9a0e1d000 r--s 00017000 08:07 2634051                    /home/ricardo/glassfish-4.1.1/glassfish/modules/dataprovider.jar
+7fd9a0e1d000-7fd9a3e1e000 rw-p 00000000 00:00 0 
+7fd9a3e1e000-7fd9a3e20000 r--s 00007000 08:07 2898881                    /home/ricardo/.m2/repository/org/apache/maven/surefire/surefire-junit4/2.10/surefire-junit4-2.10.jar
+7fd9a3e20000-7fd9a3e22000 r--s 0000e000 08:07 3018351                    /home/ricardo/.m2/repository/com/fasterxml/classmate/1.3.1/classmate-1.3.1.jar
+7fd9a3e22000-7fd9a3e24000 r--s 0000f000 08:07 3018349                    /home/ricardo/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar
+7fd9a3e24000-7fd9a3e28000 r--s 0000c000 08:07 3018346                    /home/ricardo/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar
+7fd9a3e28000-7fd9a3e3a000 r--s 000a9000 08:07 3018344                    /home/ricardo/.m2/repository/org/hibernate/hibernate-validator/5.4.2.Final/hibernate-validator-5.4.2.Final.jar
+7fd9a3e3a000-7fd9a3e3d000 r--s 00014000 08:07 3018342                    /home/ricardo/.m2/repository/com/github/virtuald/curvesapi/1.03/curvesapi-1.03.jar
+7fd9a3e3d000-7fd9a3e7b000 r--s 0025d000 08:07 3018338                    /home/ricardo/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar
+7fd9a3e7b000-7fd9a3f3b000 r--s 004e6000 08:07 3018337                    /home/ricardo/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.14/poi-ooxml-schemas-3.14.jar
+7fd9a3f3b000-7fd9a3f3f000 r--s 0002c000 08:07 2633829                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-jca-plugin.jar
+7fd9a3f3f000-7fd9a3f41000 r--s 0000d000 08:07 2634199                    /home/ricardo/glassfish-4.1.1/glassfish/modules/launcher.jar
+7fd9a3f41000-7fd9a3f43000 r--s 00024000 08:07 2634128                    /home/ricardo/glassfish-4.1.1/glassfish/modules/pkg-client.jar
+7fd9a3f43000-7fd9a3f45000 r--s 00006000 08:07 2633729                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-admingui-connector.jar
+7fd9a3f45000-7fd9a3f46000 r--s 00002000 08:07 2633691                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-plugin-service.jar
+7fd9a3f46000-7fd9a3f48000 r--s 0000c000 08:07 2633380                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-community-branding-plugin.jar
+7fd9a3f48000-7fd9a3f4a000 r--s 00001000 08:07 2633553                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ha-shoal-cache-bootstrap.jar
+7fd9a3f4a000-7fd9a3f57000 r--s 0012d000 08:07 2633980                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-common.jar
+7fd9a3f57000-7fd9a3f58000 r--s 00002000 08:07 2633918                    /home/ricardo/glassfish-4.1.1/glassfish/modules/registration-api.jar
+7fd9a3f58000-7fd9a3f5b000 r--s 00011000 08:07 2633872                    /home/ricardo/glassfish-4.1.1/glassfish/modules/registration-impl.jar
+7fd9a3f5b000-7fd9a3f5d000 r--s 00004000 08:07 2633693                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-registration.jar
+7fd9a3f5d000-7fd9a3f61000 r--s 00025000 08:07 2633379                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.apache.felix.bundlerepository.jar
+7fd9a3f61000-7fd9a3f67000 r--s 0005b000 08:07 2633978                    /home/ricardo/glassfish-4.1.1/glassfish/modules/shoal-gms-impl.jar
+7fd9a3f67000-7fd9a3f69000 r--s 0000a000 08:07 2634092                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gms-adapter.jar
+7fd9a3f69000-7fd9a3f6b000 r--s 00008000 08:07 2633906                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-media-sse.jar
+7fd9a3f6b000-7fd9a3f6e000 r--s 0000e000 08:07 2633690                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-media-multipart.jar
+7fd9a3f6e000-7fd9a3f71000 r--s 00011000 08:07 2634197                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jettison.jar
+7fd9a3f71000-7fd9a3f74000 r--s 00009000 08:07 2633500                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-media-json-jettison.jar
+7fd9a3f74000-7fd9a3f76000 r--s 00003000 08:07 2633699                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-restadmin-connector.jar
+7fd9a3f76000-7fd9a3f80000 r--s 0007b000 08:07 2634058                    /home/ricardo/glassfish-4.1.1/glassfish/modules/rest-service.jar
+7fd9a3f80000-7fd9a3f87000 r--p 00000000 08:07 2886237                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7fd9a3f87000-7fd9a3f8f000 r-xp 00007000 08:07 2886237                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7fd9a3f8f000-7fd9a3f92000 r--p 0000f000 08:07 2886237                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7fd9a3f92000-7fd9a3f93000 r--p 00011000 08:07 2886237                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7fd9a3f93000-7fd9a3f94000 rw-p 00012000 08:07 2886237                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7fd9a3f94000-7fd9a3f98000 r--p 00000000 08:07 2886236                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7fd9a3f98000-7fd9a3fa7000 r-xp 00004000 08:07 2886236                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7fd9a3fa7000-7fd9a3fab000 r--p 00013000 08:07 2886236                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7fd9a3fab000-7fd9a3fac000 r--p 00016000 08:07 2886236                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7fd9a3fac000-7fd9a3fad000 rw-p 00017000 08:07 2886236                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7fd9a3fad000-7fd9a3fb1000 r--s 000a1000 08:07 2886281                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7fd9a3fb1000-7fd9a3fb8000 r--s 0003f000 08:07 3018334                    /home/ricardo/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+7fd9a3fb8000-7fd9a3fe2000 r--s 00240000 08:07 3018332                    /home/ricardo/.m2/repository/org/apache/poi/poi/3.14/poi-3.14.jar
+7fd9a3fe2000-7fd9a3ff3000 r--s 0012a000 08:07 3018330                    /home/ricardo/.m2/repository/org/apache/poi/poi-ooxml/3.14/poi-ooxml-3.14.jar
+7fd9a3ff3000-7fd9a4000000 r--s 00083000 08:07 3018328                    /home/ricardo/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar
+7fd9a4000000-7fd9a46db000 rw-p 00000000 00:00 0 
+7fd9a46db000-7fd9a8000000 ---p 00000000 00:00 0 
+7fd9a8000000-7fd9a8021000 rw-p 00000000 00:00 0 
+7fd9a8021000-7fd9ac000000 ---p 00000000 00:00 0 
+7fd9ac000000-7fd9adc5c000 rw-p 00000000 00:00 0 
+7fd9adc5c000-7fd9b0000000 ---p 00000000 00:00 0 
+7fd9b0000000-7fd9b0838000 rw-p 00000000 00:00 0 
+7fd9b0838000-7fd9b4000000 ---p 00000000 00:00 0 
+7fd9b4000000-7fd9b4021000 rw-p 00000000 00:00 0 
+7fd9b4021000-7fd9b8000000 ---p 00000000 00:00 0 
+7fd9b8000000-7fd9b8021000 rw-p 00000000 00:00 0 
+7fd9b8021000-7fd9bc000000 ---p 00000000 00:00 0 
+7fd9bc000000-7fd9bc022000 rw-p 00000000 00:00 0 
+7fd9bc022000-7fd9c0000000 ---p 00000000 00:00 0 
+7fd9c0000000-7fd9c0021000 rw-p 00000000 00:00 0 
+7fd9c0021000-7fd9c4000000 ---p 00000000 00:00 0 
+7fd9c4000000-7fd9c4021000 rw-p 00000000 00:00 0 
+7fd9c4021000-7fd9c8000000 ---p 00000000 00:00 0 
+7fd9c8000000-7fd9c8001000 r--s 00007000 08:07 2634098                    /home/ricardo/glassfish-4.1.1/glassfish/modules/rest-client.jar
+7fd9c8001000-7fd9c8003000 r--s 00005000 08:07 3018341                    /home/ricardo/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar
+7fd9c8003000-7fd9c8005000 r--s 00009000 08:07 3018327                    /home/ricardo/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar
+7fd9c8005000-7fd9c8010000 r--s 00080000 08:07 3018324                    /home/ricardo/.m2/repository/org/dbunit/dbunit/2.5.3/dbunit-2.5.3.jar
+7fd9c8010000-7fd9c8012000 r--s 00009000 08:07 3018323                    /home/ricardo/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+7fd9c8012000-7fd9c8018000 r--s 00036000 08:07 3018322                    /home/ricardo/.m2/repository/junit/junit/4.11/junit-4.11.jar
+7fd9c8018000-7fd9c803a000 r--s 00120000 08:07 3018321                    /home/ricardo/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar
+7fd9c803a000-7fd9c8043000 r--s 000ed000 08:07 3018320                    /home/ricardo/.m2/repository/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar
+7fd9c8043000-7fd9c8047000 r--s 00010000 08:07 2633438                    /home/ricardo/glassfish-4.1.1/glassfish/modules/endorsed/webservices-api-osgi.jar
+7fd9c8047000-7fd9c804b000 r--s 00016000 08:07 2633867                    /home/ricardo/glassfish-4.1.1/glassfish/modules/endorsed/jaxb-api.jar
+7fd9c804b000-7fd9c804d000 r--s 00005000 08:07 2633437                    /home/ricardo/glassfish-4.1.1/glassfish/modules/endorsed/javax.annotation-api.jar
+7fd9c804d000-7fd9c804e000 r--s 00001000 08:07 2634364                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyrun.jar
+7fd9c804e000-7fd9c8051000 r--s 00031000 08:07 2634338                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbytools.jar
+7fd9c8051000-7fd9c8054000 r--s 0003a000 08:07 2634363                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbynet.jar
+7fd9c8054000-7fd9c805a000 r--s 00087000 08:07 2634320                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyclient.jar
+7fd9c805a000-7fd9c805c000 r--s 00018000 08:07 2634145                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_zh_TW.jar
+7fd9c805c000-7fd9c805f000 r--s 00017000 08:07 2634146                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_zh_CN.jar
+7fd9c805f000-7fd9c8061000 r--s 0001c000 08:07 2634252                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_ru.jar
+7fd9c8061000-7fd9c8063000 r--s 00014000 08:07 2634147                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_pt_BR.jar
+7fd9c8063000-7fd9c8065000 r--s 00015000 08:07 2634249                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_pl.jar
+7fd9c8065000-7fd9c8067000 r--s 00019000 08:07 2634144                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_ko_KR.jar
+7fd9c8067000-7fd9c8069000 r--s 0001b000 08:07 2634143                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_ja_JP.jar
+7fd9c8069000-7fd9c806b000 r--s 00017000 08:07 2634253                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_it.jar
+7fd9c806b000-7fd9c806d000 r--s 00015000 08:07 2634251                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_hu.jar
+7fd9c806d000-7fd9c806f000 r--s 00018000 08:07 2634248                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_fr.jar
+7fd9c806f000-7fd9c8071000 r--s 00017000 08:07 2634247                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_es.jar
+7fd9c8071000-7fd9c8073000 r--s 00018000 08:07 2634142                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_de_DE.jar
+7fd9c8073000-7fd9c8075000 r--s 00015000 08:07 2634250                    /home/ricardo/glassfish-4.1.1/javadb/lib/derbyLocale_cs.jar
+7fd9c8075000-7fd9c809f000 r--s 0027a000 08:07 2634399                    /home/ricardo/glassfish-4.1.1/javadb/lib/derby.jar
+7fd9c809f000-7fd9c80a1000 r--s 00006000 08:07 2633843                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-jts-plugin.jar
+7fd9c80a1000-7fd9c80a3000 r--s 00004000 08:07 2634132                    /home/ricardo/glassfish-4.1.1/glassfish/modules/metro-glue.jar
+7fd9c80a3000-7fd9c80a4000 r--s 00000000 08:07 2633529                    /home/ricardo/glassfish-4.1.1/glassfish/modules/weld-integration-fragment.jar
+7fd9c80a4000-7fd9c80a6000 r--s 00014000 08:07 2633685                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.oracle.jar
+7fd9c80a6000-7fd9c80a8000 r--s 00012000 08:07 2633765                    /home/ricardo/glassfish-4.1.1/glassfish/modules/webservices.security.jar
+7fd9c80a8000-7fd9c80aa000 r--s 0000b000 08:07 2633761                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-corba-plugin.jar
+7fd9c80aa000-7fd9c80b1000 r--s 00046000 08:07 2633484                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-grizzly-extra-all.jar
+7fd9c80b1000-7fd9c80b4000 r--s 00011000 08:07 2634273                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-ha.jar
+7fd9c80b4000-7fd9c80b6000 r--s 00004000 08:07 2634025                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-gf-ejb.jar
+7fd9c80b6000-7fd9c80b8000 r--s 0000b000 08:07 2634049                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-cdi1x.jar
+7fd9c80b8000-7fd9c80b9000 r--s 0000a000 08:07 2633548                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-batch-commands.jar
+7fd9c80b9000-7fd9c80ba000 r--s 00003000 08:07 2634011                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jsf-connector.jar
+7fd9c80ba000-7fd9c80be000 r--s 0002b000 08:07 2633911                    /home/ricardo/glassfish-4.1.1/glassfish/modules/connectors-admin.jar
+7fd9c80be000-7fd9c80db000 r--s 0013c000 08:07 2633546                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.jpa.jpql.jar
+7fd9c80db000-7fd9c80de000 r--s 00027000 08:07 2633839                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-jms-plugin.jar
+7fd9c80de000-7fd9c80e0000 r--s 00014000 08:07 2634203                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jms-core.jar
+7fd9c80e0000-7fd9c80e2000 r--s 0001a000 08:07 2634174                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jms-admin.jar
+7fd9c80e2000-7fd9c80e7000 r--s 00036000 08:07 2634044                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-enhancer.jar
+7fd9c80e7000-7fd9c80f0000 r--s 00088000 08:07 2633755                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-support-sqlstore.jar
+7fd9c80f0000-7fd9c80f4000 r--s 0003b000 08:07 2633951                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-support-ejb.jar
+7fd9c80f4000-7fd9c80f5000 r--s 00004000 08:07 2634019                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javaee-kernel.jar
+7fd9c80f5000-7fd9c80f8000 r--s 0000a000 08:07 2633429                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-container-grizzly-client.jar
+7fd9c80f8000-7fd9c80fa000 r--s 00002000 08:07 2633769                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-cdi1x-servlet.jar
+7fd9c80fa000-7fd9c8101000 r--s 0004f000 08:07 2633754                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.dbws.jar
+7fd9c8101000-7fd9c8106000 r--s 00067000 08:07 2633912                    /home/ricardo/glassfish-4.1.1/glassfish/modules/antlr-repackaged.jar
+7fd9c8106000-7fd9c8147000 r--s 004d8000 08:07 2633764                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.core.jar
+7fd9c8147000-7fd9c8148000 r--s 0000e000 08:07 2634136                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jdbc-admin.jar
+7fd9c8148000-7fd9c814a000 r--s 00015000 08:07 2633530                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-concurrent-plugin.jar
+7fd9c814a000-7fd9c814c000 r--s 0000b000 08:07 2633285                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.jpa.modelgen.processor.jar
+7fd9c814c000-7fd9c814e000 r--s 00006000 08:07 2633575                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-ejb-lite-plugin.jar
+7fd9c814e000-7fd9c8157000 r--s 00093000 08:07 2633766                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.moxy.jar
+7fd9c8157000-7fd9c8159000 r--s 00007000 08:07 2633833                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-ejb-plugin.jar
+7fd9c8159000-7fd9c815b000 r--s 0000a000 08:07 2633952                    /home/ricardo/glassfish-4.1.1/glassfish/modules/work-management.jar
+7fd9c815b000-7fd9c815d000 r--s 0000c000 08:07 2633482                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.enterprise.concurrent.jar
+7fd9c815d000-7fd9c815f000 r--s 00002000 08:07 2633417                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.enterprise.concurrent-api.jar
+7fd9c815f000-7fd9c8162000 r--s 00018000 08:07 2633958                    /home/ricardo/glassfish-4.1.1/glassfish/modules/concurrent-impl.jar
+7fd9c8162000-7fd9c8163000 r--s 00003000 08:07 2633917                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-jms-connector.jar
+7fd9c8163000-7fd9c8165000 r--s 00002000 08:07 2633838                    /home/ricardo/glassfish-4.1.1/glassfish/modules/com.ibm.jbatch.spi.jar
+7fd9c8165000-7fd9c8167000 r--s 00003000 08:07 2633524                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-batch-connector.jar
+7fd9c8167000-7fd9c8169000 r--s 00009000 08:07 2634017                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jpa-container.jar
+7fd9c8169000-7fd9c816b000 r--s 00015000 08:07 2634054                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ejb.security.jar
+7fd9c816b000-7fd9c816d000 r--s 00007000 08:07 2633794                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.websocket-api.jar
+7fd9c816d000-7fd9c816e000 r--s 00004000 08:07 2633922                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javamail-runtime.jar
+7fd9c816e000-7fd9c8170000 r--s 0000f000 08:07 2634048                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-client.jar
+7fd9c8170000-7fd9c8171000 r--s 00001000 08:07 2634090                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jsonp-jaxrs.jar
+7fd9c8171000-7fd9c8173000 r--s 00012000 08:07 2634050                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jdbc-runtime.jar
+7fd9c8173000-7fd9c8175000 r--s 00020000 08:07 2633574                    /home/ricardo/glassfish-4.1.1/glassfish/modules/schema2beans-repackaged.jar
+7fd9c8175000-7fd9c8177000 r--s 00011000 08:07 2633954                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-ejb-mapping.jar
+7fd9c8177000-7fd9c817a000 r--s 00017000 08:07 2633767                    /home/ricardo/glassfish-4.1.1/glassfish/modules/entitybean-container.jar
+7fd9c817a000-7fd9c817b000 r--s 00001000 08:07 2633757                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jspcaching-connector.jar
+7fd9c817b000-7fd9c817c000 r--s 00003000 08:07 2633554                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-container-servlet.jar
+7fd9c817c000-7fd9c817e000 r--s 00010000 08:07 2633836                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ejb-full-container.jar
+7fd9c817e000-7fd9c8193000 r--s 000e0000 08:07 2633956                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jaxb-extra-osgi.jar
+7fd9c8193000-7fd9c81d5000 r--s 0036c000 08:07 2634172                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jaxb-osgi.jar
+7fd9c81d5000-7fd9c81db000 r--s 0006f000 08:07 2633870                    /home/ricardo/glassfish-4.1.1/glassfish/modules/woodstox-core-asl.jar
+7fd9c81db000-7fd9c81dc000 r--s 00000000 08:07 2633427                    /home/ricardo/glassfish-4.1.1/glassfish/modules/webservices-extra-jdk-packages.jar
+7fd9c81dc000-7fd9c82a0000 r--s 00bd1000 08:07 2633923                    /home/ricardo/glassfish-4.1.1/glassfish/modules/webservices-osgi.jar
+7fd9c82a0000-7fd9cc000000 rw-p 00000000 00:00 0 
+7fd9cc000000-7fd9cc021000 rw-p 00000000 00:00 0 
+7fd9cc021000-7fd9d0000000 ---p 00000000 00:00 0 
+7fd9d0000000-7fd9d0021000 rw-p 00000000 00:00 0 
+7fd9d0021000-7fd9d4000000 ---p 00000000 00:00 0 
+7fd9d4000000-7fd9d4021000 rw-p 00000000 00:00 0 
+7fd9d4021000-7fd9d8000000 ---p 00000000 00:00 0 
+7fd9d8000000-7fd9d8004000 r--s 0003a000 08:07 2634093                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jsr109-impl.jar
+7fd9d8004000-7fd9d8006000 r--s 00008000 08:07 2634196                    /home/ricardo/glassfish-4.1.1/glassfish/modules/soap-tcp.jar
+7fd9d8006000-7fd9d8008000 r--s 00004000 08:07 2633924                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-internal-api.jar
+7fd9d8008000-7fd9d8009000 r--s 00001000 08:07 2633442                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-container-glassfish-cdi.jar
+7fd9d8009000-7fd9d800b000 r--s 00003000 08:07 2634088                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jdbc-config.jar
+7fd9d800b000-7fd9d800d000 r--s 00005000 08:07 2633758                    /home/ricardo/glassfish-4.1.1/glassfish/modules/concurrent-connector.jar
+7fd9d800d000-7fd9d800e000 r--s 00002000 08:07 2633550                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-cdi1x-transaction.jar
+7fd9d800e000-7fd9d8013000 r--s 0002a000 08:07 2633723                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.antlr.jar
+7fd9d8013000-7fd9d801c000 r--s 00056000 08:07 2633549                    /home/ricardo/glassfish-4.1.1/glassfish/modules/com.ibm.jbatch.container.jar
+7fd9d801c000-7fd9d801f000 r--s 00012000 08:07 2634137                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.json.jar
+7fd9d801f000-7fd9d8020000 r--s 00001000 08:07 2633470                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-media-json-processing.jar
+7fd9d8020000-7fd9d8023000 r--s 0000e000 08:07 2633573                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-entity-filtering.jar
+7fd9d8023000-7fd9d8025000 r--s 00002000 08:07 2634166                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-spi.jar
+7fd9d8025000-7fd9d8028000 r--s 0001f000 08:07 2633701                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.xml.registry-api.jar
+7fd9d8028000-7fd9d802a000 r--s 00007000 08:07 2633865                    /home/ricardo/glassfish-4.1.1/glassfish/modules/resources-runtime.jar
+7fd9d802a000-7fd9d802d000 r--s 00019000 08:07 2633950                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.ws.rs-api.jar
+7fd9d802d000-7fd9d8031000 r--s 00023000 08:07 2634010                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-client.jar
+7fd9d8031000-7fd9d8047000 r--s 000ce000 08:07 2634023                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-server.jar
+7fd9d8047000-7fd9d8048000 r--s 00004000 08:07 2633734                    /home/ricardo/glassfish-4.1.1/glassfish/modules/osgi-resource-locator.jar
+7fd9d8048000-7fd9d805f000 r--s 000d2000 08:07 2634056                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-guava.jar
+7fd9d805f000-7fd9d806d000 r--s 0009a000 08:07 2634018                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-common.jar
+7fd9d806d000-7fd9d806e000 r--s 00001000 08:07 2633763                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-mvc-connector.jar
+7fd9d806e000-7fd9d8070000 r--s 00007000 08:07 2633949                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.batch-api.jar
+7fd9d8070000-7fd9d8072000 r--s 00005000 08:07 2633576                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-container-servlet.jar
+7fd9d8072000-7fd9d8073000 r--s 00001000 08:07 2633979                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jstl-connector.jar
+7fd9d8073000-7fd9d8079000 r--s 00049000 08:07 2633798                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.asm.jar
+7fd9d8079000-7fd9d8081000 r--s 00054000 08:07 2634125                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-core.jar
+7fd9d8081000-7fd9d8082000 r--s 00001000 08:07 2633443                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-container-glassfish-ejb.jar
+7fd9d8082000-7fd9d8084000 r--s 0000f000 08:07 2633728                    /home/ricardo/glassfish-4.1.1/glassfish/modules/webservices-connector.jar
+7fd9d8084000-7fd9d808c000 r--s 00079000 08:07 2633830                    /home/ricardo/glassfish-4.1.1/glassfish/modules/connectors-runtime.jar
+7fd9d808c000-7fd9d808e000 r--s 00006000 08:07 2633505                    /home/ricardo/glassfish-4.1.1/glassfish/modules/connectors-inbound-runtime.jar
+7fd9d808e000-7fd9d8090000 r--s 0000e000 08:07 2624965                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-utility.jar
+7fd9d8090000-7fd9d8093000 r--s 00023000 08:07 2634167                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-model.jar
+7fd9d8093000-7fd9d8095000 r--s 00010000 08:07 2633700                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cmp-generator-database.jar
+7fd9d8095000-7fd9d8096000 r--s 00005000 08:07 2633869                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-media-moxy.jar
+7fd9d8096000-7fd9d8098000 r--s 0000f000 08:07 2634333                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jta.jar
+7fd9d8098000-7fd9d809e000 r--s 00059000 08:07 2634334                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jts.jar
+7fd9d809e000-7fd9d80a2000 r--s 00028000 08:07 2634168                    /home/ricardo/glassfish-4.1.1/glassfish/modules/stax2-api.jar
+7fd9d80a2000-7fd9d80a4000 r--s 0000e000 08:07 2634194                    /home/ricardo/glassfish-4.1.1/glassfish/modules/mimepull.jar
+7fd9d80a4000-7fd9d80c2000 r--s 001bd000 08:07 2634335                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ant.jar
+7fd9d80c2000-7fd9d80cb000 r--s 0005b000 08:07 2633697                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.servlet.jsp.jstl.jar
+7fd9d80cb000-7fd9d80cd000 r--s 00005000 08:07 2633826                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javamail-connector.jar
+7fd9d80cd000-7fd9d80ce000 r--s 00007000 08:07 2633503                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.servlet.jsp.jstl-api.jar
+7fd9d80ce000-7fd9d80d1000 r--s 0000f000 08:07 2633868                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-media-jaxb.jar
+7fd9d80d1000-7fd9d80d4000 r--s 0000d000 08:07 2633441                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-container-servlet-core.jar
+7fd9d80d4000-7fd9d80d5000 r--s 00006000 08:07 2633831                    /home/ricardo/glassfish-4.1.1/glassfish/modules/persistence-common.jar
+7fd9d80d5000-7fd9d80d6000 r--s 00002000 08:07 2634127                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ejb-client.jar
+7fd9d80d6000-7fd9d80e2000 r--s 000d7000 08:07 2634012                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ejb-container.jar
+7fd9d80e2000-7fd9d80e9000 r--s 0003c000 08:07 2633796                    /home/ricardo/glassfish-4.1.1/glassfish/modules/dbschema-repackaged.jar
+7fd9d80e9000-7fd9d80eb000 r--s 0000e000 08:07 2634021                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.jms-api.jar
+7fd9d80eb000-7fd9d80ec000 r--s 00004000 08:07 2633874                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-weld-connector.jar
+7fd9d80ec000-7fd9d8111000 r--s 001aa000 08:07 2634299                    /home/ricardo/glassfish-4.1.1/glassfish/modules/guava.jar
+7fd9d8111000-7fd9d8135000 r--s 00186000 08:07 2633921                    /home/ricardo/glassfish-4.1.1/glassfish/modules/weld-osgi-bundle.jar
+7fd9d8135000-7fd9d8137000 r--s 00001000 08:07 2633797                    /home/ricardo/glassfish-4.1.1/glassfish/modules/appclient-connector.jar
+7fd9d8137000-7fd9d8139000 r--s 0000a000 08:07 2633687                    /home/ricardo/glassfish-4.1.1/glassfish/modules/deployment-javaee-full.jar
+7fd9d8139000-7fd9d813c000 r--s 0000c000 08:07 2634022                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jboss-logging.jar
+7fd9d813c000-7fd9d813f000 r--s 0000f000 08:07 2634239                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cdi-api.jar
+7fd9d813f000-7fd9d8141000 r--s 00004000 08:07 2634242                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-sse.jar
+7fd9d8141000-7fd9d8143000 r--s 00006000 08:07 2634007                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-embed-api.jar
+7fd9d8143000-7fd9d8145000 r--s 0000b000 08:07 2634085                    /home/ricardo/glassfish-4.1.1/glassfish/modules/websecurity.jar
+7fd9d8145000-7fd9d8147000 r--s 00008000 08:07 2633724                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-gui-plugin-common.jar
+7fd9d8147000-7fd9d8149000 r--s 00001000 08:07 2634124                    /home/ricardo/glassfish-4.1.1/glassfish/modules/admin-core.jar
+7fd9d8149000-7fd9d8157000 r--s 00108000 08:07 2634193                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-core.jar
+7fd9d8157000-7fd9d815b000 r--s 000d2000 08:07 2633800                    /home/ricardo/glassfish-4.1.1/glassfish/modules/libpam4j-repackaged.jar
+7fd9d815b000-7fd9d815d000 r--s 00005000 08:07 2633731                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.interceptor-api.jar
+7fd9d815d000-7fd9d8161000 r--s 00011000 08:07 2634126                    /home/ricardo/glassfish-4.1.1/glassfish/modules/amx-javaee.jar
+7fd9d8161000-7fd9d8162000 r--s 00004000 08:07 2633903                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-ejb-connector.jar
+7fd9d8162000-7fd9d8163000 r--s 00002000 08:07 2633910                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ejb-internal-api.jar
+7fd9d8163000-7fd9d8165000 r--s 0000d000 08:07 2633526                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jaspic.provider.framework.jar
+7fd9d8165000-7fd9d8166000 r--s 0000c000 08:07 2633572                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.security.jacc-api.jar
+7fd9d8166000-7fd9d8168000 r--s 0000b000 08:07 2633418                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.security.auth.message-api.jar
+7fd9d8168000-7fd9d816f000 r--s 0004d000 08:07 2634087                    /home/ricardo/glassfish-4.1.1/glassfish/modules/security-ee.jar
+7fd9d816f000-7fd9d8170000 r--s 00002000 08:07 2633915                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-ee-api.jar
+7fd9d8170000-7fd9d8173000 r--s 00019000 08:07 2634134                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-naming.jar
+7fd9d8173000-7fd9d8175000 r--s 00006000 08:07 2633919                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-web-connector.jar
+7fd9d8175000-7fd9d8179000 r--s 00033000 08:07 2634195                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.el.jar
+7fd9d8179000-7fd9d817c000 r--s 0000b000 08:07 2633735                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.servlet.jsp-api.jar
+7fd9d817c000-7fd9d817e000 r--s 00018000 08:07 2634192                    /home/ricardo/glassfish-4.1.1/glassfish/modules/war-util.jar
+7fd9d817e000-7fd9d8182000 r--s 00011000 08:07 2634240                    /home/ricardo/glassfish-4.1.1/glassfish/modules/stats77.jar
+7fd9d8182000-7fd9d8187000 r--s 00037000 08:07 2633439                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jmxremote_optional-repackaged.jar
+7fd9d8187000-7fd9d818a000 r--s 0000f000 08:07 2633726                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-mbeanserver.jar
+7fd9d818a000-7fd9d8192000 r--s 00065000 08:07 2634202                    /home/ricardo/glassfish-4.1.1/glassfish/modules/amx-core.jar
+7fd9d8192000-7fd9d8194000 r--s 00007000 08:07 2633527                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.management.j2ee-api.jar
+7fd9d8194000-7fd9d8198000 r--s 0002a000 08:07 2634244                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-cli.jar
+7fd9d8198000-7fd9d81a2000 r--s 00096000 08:07 2634198                    /home/ricardo/glassfish-4.1.1/glassfish/modules/web-glue.jar
+7fd9d81a2000-7fd9d81ca000 r--s 002d5000 08:07 2634099                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.faces.jar
+7fd9d81ca000-7fd9d81ce000 r--s 00022000 08:07 2633908                    /home/ricardo/glassfish-4.1.1/glassfish/modules/weld-integration.jar
+7fd9d81ce000-7fd9d81cf000 r--s 00006000 08:07 2633905                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-jms-injection.jar
+7fd9d81cf000-7fd9d81d1000 r--s 00008000 08:07 2633837                    /home/ricardo/glassfish-4.1.1/glassfish/modules/bean-validator-cdi.jar
+7fd9d81d1000-7fd9d81d4000 r--s 0001e000 08:07 2633504                    /home/ricardo/glassfish-4.1.1/glassfish/modules/console-common-full-plugin.jar
+7fd9d81d4000-7fd9d81d6000 r--s 00001000 08:07 2633571                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-connectors-connector.jar
+7fd9d81d6000-7fd9d81dd000 r--s 0007f000 08:07 2633878                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.servlet.jsp.jar
+7fd9d81dd000-7fd9d81df000 r--s 00009000 08:07 2634135                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-mvc.jar
+7fd9d81df000-7fd9d81e0000 r--s 00000000 08:07 2633913                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cdi-api-fragment.jar
+7fd9d81e0000-7fd9d81e3000 r--s 00009000 08:07 2633871                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.xml.rpc-api.jar
+7fd9d81e3000-7fd9d81e5000 r--s 00007000 08:07 2634275                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ha-api.jar
+7fd9d81e5000-7fd9d81e8000 r--s 0000d000 08:07 2633879                    /home/ricardo/glassfish-4.1.1/glassfish/modules/nucleus-resources.jar
+7fd9d81e8000-7fd9d81eb000 r--s 00018000 08:07 2633791                    /home/ricardo/glassfish-4.1.1/glassfish/modules/resources-connector.jar
+7fd9d81eb000-7fd9d81ec000 r--s 00005000 08:07 2633551                    /home/ricardo/glassfish-4.1.1/glassfish/modules/transaction-internal-api.jar
+7fd9d81ec000-7fd9d81ef000 r--s 00016000 08:07 2633570                    /home/ricardo/glassfish-4.1.1/glassfish/modules/connectors-internal-api.jar
+7fd9d81ef000-7fd9d81f7000 r--s 00086000 08:07 2634130                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.mail.jar
+7fd9d81f7000-7fd9d81fa000 r--s 00012000 08:07 2633920                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-naming.jar
+7fd9d81fa000-7fd9d8201000 r--s 00027000 08:07 2633904                    /home/ricardo/glassfish-4.1.1/glassfish/modules/container-common.jar
+7fd9d8201000-7fd9d8203000 r--s 00006000 08:07 2633695                    /home/ricardo/glassfish-4.1.1/glassfish/modules/deployment-javaee-core.jar
+7fd9d8203000-7fd9d8205000 r--s 00001000 08:07 2633916                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gf-jpa-connector.jar
+7fd9d8205000-7fd9d821c000 r--s 00148000 08:07 2633789                    /home/ricardo/glassfish-4.1.1/glassfish/modules/org.eclipse.persistence.jpa.jar
+7fd9d821c000-7fd9d8220000 r--s 00016000 08:07 2633953                    /home/ricardo/glassfish-4.1.1/glassfish/modules/monitoring-core.jar
+7fd9d8220000-7fd9d8222000 r--s 00002000 08:07 2634084                    /home/ricardo/glassfish-4.1.1/glassfish/modules/orb-enabler.jar
+7fd9d8222000-7fd9d8225000 r--s 0000c000 08:07 2634008                    /home/ricardo/glassfish-4.1.1/glassfish/modules/orb-connector.jar
+7fd9d8225000-7fd9d9000000 r--p 00000000 08:07 2890873                    /usr/lib/locale/locale-archive
+7fd9d9000000-7fd9d9b00000 rwxp 00000000 00:00 0 
+7fd9d9b00000-7fd9e8000000 ---p 00000000 00:00 0 
+7fd9e8000000-7fd9ebfff000 rw-p 00000000 00:00 0 
+7fd9ebfff000-7fd9ec000000 ---p 00000000 00:00 0 
+7fd9ec000000-7fd9ec005000 r--s 00018000 08:07 2633528                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-corba-csiv2-idl.jar
+7fd9ec005000-7fd9ec007000 r--s 00005000 08:07 2633469                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-corba-internal-api.jar
+7fd9ec007000-7fd9ec01c000 r--s 000b3000 08:07 2633696                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-corba-omgapi.jar
+7fd9ec01c000-7fd9ec01e000 r--s 00009000 08:07 2633759                    /home/ricardo/glassfish-4.1.1/glassfish/modules/annotation-framework.jar
+7fd9ec01e000-7fd9ec021000 r--s 0000d000 08:07 2634024                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.ejb-api.jar
+7fd9ec021000-7fd9ec024000 r--s 0000f000 08:07 2633834                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.resource-api.jar
+7fd9ec024000-7fd9ec026000 r--s 00006000 08:07 2633730                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.transaction-api.jar
+7fd9ec026000-7fd9ec029000 r--s 00015000 08:07 2633873                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.servlet-api.jar
+7fd9ec029000-7fd9ec037000 r--s 000ac000 08:07 2634332                    /home/ricardo/glassfish-4.1.1/glassfish/modules/dol.jar
+7fd9ec037000-7fd9ec039000 r--s 00014000 08:07 2634200                    /home/ricardo/glassfish-4.1.1/glassfish/modules/orb-iiop.jar
+7fd9ec039000-7fd9ec03a000 r--s 00000000 08:07 2633313                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-oracle-jdbc-driver-packages.jar
+7fd9ec03a000-7fd9ec040000 r--s 00023000 08:07 2633877                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.persistence.jar
+7fd9ec040000-7fd9ec043000 r--s 00008000 08:07 2634009                    /home/ricardo/glassfish-4.1.1/glassfish/modules/shoal-gms-api.jar
+7fd9ec043000-7fd9ec045000 r--s 00005000 08:07 2634015                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gms-bootstrap.jar
+7fd9ec045000-7fd9ec047000 r--s 00009000 08:07 2634089                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cluster-ssh.jar
+7fd9ec047000-7fd9ec049000 r--s 00008000 08:07 2633975                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cluster-common.jar
+7fd9ec049000-7fd9ec04b000 r--s 00000000 08:07 2634047                    /home/ricardo/glassfish-4.1.1/glassfish/modules/api-exporter.jar
+7fd9ec04b000-7fd9ec04e000 r--s 00029000 08:07 2634243                    /home/ricardo/glassfish-4.1.1/glassfish/modules/logging.jar
+7fd9ec04e000-7fd9ec04f000 r--s 00002000 08:07 2633762                    /home/ricardo/glassfish-4.1.1/glassfish/modules/simple-glassfish-api.jar
+7fd9ec04f000-7fd9ec052000 r--s 0001d000 08:07 2634175                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish.jar
+7fd9ec052000-7fd9ec055000 r--s 00020000 08:07 2633760                    /home/ricardo/glassfish-4.1.1/glassfish/modules/flashlight-framework.jar
+7fd9ec055000-7fd9ec05f000 r--s 000aa000 08:07 2634274                    /home/ricardo/glassfish-4.1.1/glassfish/modules/kernel.jar
+7fd9ec05f000-7fd9ec061000 r--s 00008000 08:07 2633790                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jackson-annotations.jar
+7fd9ec061000-7fd9ec072000 r--s 00101000 08:07 2633909                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jackson-databind.jar
+7fd9ec072000-7fd9ec076000 r--s 00034000 08:07 2634053                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jackson-core.jar
+7fd9ec076000-7fd9ec077000 r--s 00006000 08:07 2633827                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jackson-jaxrs-base.jar
+7fd9ec077000-7fd9ec07a000 r--s 0000b000 08:07 2633864                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ldapbp-repackaged.jar
+7fd9ec07a000-7fd9ec07f000 r--s 00046000 08:07 2634238                    /home/ricardo/glassfish-4.1.1/glassfish/modules/asm-all.jar
+7fd9ec07f000-7fd9ec081000 r--s 0000a000 08:07 2634055                    /home/ricardo/glassfish-4.1.1/glassfish/modules/pfl-tf-tools.jar
+7fd9ec081000-7fd9ec084000 r--s 0000f000 08:07 2633955                    /home/ricardo/glassfish-4.1.1/glassfish/modules/pfl-basic-tools.jar
+7fd9ec084000-7fd9ec08c000 r--s 0004c000 08:07 2634097                    /home/ricardo/glassfish-4.1.1/glassfish/modules/pfl-dynamic.jar
+7fd9ec08c000-7fd9ec092000 r--s 00050000 08:07 2634241                    /home/ricardo/glassfish-4.1.1/glassfish/modules/pfl-asm.jar
+7fd9ec092000-7fd9ec095000 r--s 00014000 08:07 2634272                    /home/ricardo/glassfish-4.1.1/glassfish/modules/pfl-tf.jar
+7fd9ec095000-7fd9ec09b000 r--s 00028000 08:07 2634169                    /home/ricardo/glassfish-4.1.1/glassfish/modules/pfl-basic.jar
+7fd9ec09b000-7fd9ec0a0000 r--s 0002d000 08:07 2634300                    /home/ricardo/glassfish-4.1.1/glassfish/modules/gmbal.jar
+7fd9ec0a0000-7fd9ec0a3000 r--s 00029000 08:07 2633876                    /home/ricardo/glassfish-4.1.1/glassfish/modules/deployment-common.jar
+7fd9ec0a3000-7fd9ec0a4000 r--s 00005000 08:07 2634201                    /home/ricardo/glassfish-4.1.1/glassfish/modules/ssl-impl.jar
+7fd9ec0a4000-7fd9ec0ac000 r--s 00070000 08:07 2634204                    /home/ricardo/glassfish-4.1.1/glassfish/modules/security.jar
+7fd9ec0ac000-7fd9ec0b2000 r--s 00020000 08:07 2633875                    /home/ricardo/glassfish-4.1.1/glassfish/modules/security-services.jar
+7fd9ec0b2000-7fd9ec0b7000 r--s 0001d000 08:07 2634052                    /home/ricardo/glassfish-4.1.1/glassfish/modules/internal-api.jar
+7fd9ec0b7000-7fd9ec0c4000 r--s 00080000 08:07 2634138                    /home/ricardo/glassfish-4.1.1/glassfish/modules/config-api.jar
+7fd9ec0c4000-7fd9ec0c7000 r--s 00009000 08:07 2633977                    /home/ricardo/glassfish-4.1.1/glassfish/modules/management-api.jar
+7fd9ec0c7000-7fd9ec0e3000 r--s 00172000 08:07 2633803                    /home/ricardo/glassfish-4.1.1/glassfish/modules/nucleus-grizzly-all.jar
+7fd9ec0e3000-7fd9ec0e5000 r--s 00002000 08:07 2633725                    /home/ricardo/glassfish-4.1.1/glassfish/modules/scattered-archive-api.jar
+7fd9ec0e5000-7fd9ec0ed000 r--s 00028000 08:07 2634016                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-api.jar
+7fd9ec0ed000-7fd9ec0f8000 r--s 00073000 08:07 2634086                    /home/ricardo/glassfish-4.1.1/glassfish/modules/common-util.jar
+7fd9ec0f8000-7fd9ec0fe000 r--s 0004e000 08:07 2634129                    /home/ricardo/glassfish-4.1.1/glassfish/modules/admin-util.jar
+7fd9ec0fe000-7fd9ec104000 r--s 0005a000 08:07 2633832                    /home/ricardo/glassfish-4.1.1/glassfish/modules/asm-all-repackaged.jar
+7fd9ec104000-7fd9ec107000 r--s 00013000 08:07 2634091                    /home/ricardo/glassfish-4.1.1/glassfish/modules/class-model.jar
+7fd9ec107000-7fd9ec109000 r--s 0000c000 08:07 2634045                    /home/ricardo/glassfish-4.1.1/glassfish/modules/hk2-runlevel.jar
+7fd9ec109000-7fd9ec113000 r--s 000a2000 08:07 2634170                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javassist.jar
+7fd9ec113000-7fd9ec117000 r--s 00028000 08:07 2634096                    /home/ricardo/glassfish-4.1.1/glassfish/modules/hk2-locator.jar
+7fd9ec117000-7fd9ec12a000 r--s 000b1000 08:07 2633974                    /home/ricardo/glassfish-4.1.1/glassfish/modules/bean-validator.jar
+7fd9ec12a000-7fd9ec12f000 r--s 0002d000 08:07 2634133                    /home/ricardo/glassfish-4.1.1/glassfish/modules/hk2-config.jar
+7fd9ec12f000-7fd9ec132000 r--s 0001a000 08:07 2634205                    /home/ricardo/glassfish-4.1.1/glassfish/modules/hk2-core.jar
+7fd9ec132000-7fd9ec134000 r--s 00001000 08:07 2634042                    /home/ricardo/glassfish-4.1.1/glassfish/modules/config-types.jar
+7fd9ec134000-7fd9ec136000 r--s 00002000 08:07 2633694                    /home/ricardo/glassfish-4.1.1/glassfish/modules/aopalliance-repackaged.jar
+7fd9ec136000-7fd9ec13b000 r--s 00026000 08:07 2634237                    /home/ricardo/glassfish-4.1.1/glassfish/modules/hk2-api.jar
+7fd9ec13b000-7fd9ec13c000 r--s 00001000 08:07 2634057                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.inject.jar
+7fd9ec13c000-7fd9ec13f000 r--s 00016000 08:07 2634173                    /home/ricardo/glassfish-4.1.1/glassfish/modules/hk2-utils.jar
+7fd9ec13f000-7fd9ec140000 r--s 00000000 08:07 2634336                    /home/ricardo/glassfish-4.1.1/glassfish/modules/hk2.jar
+7fd9ec140000-7fd9ec144000 r--s 00039000 08:07 2634013                    /home/ricardo/glassfish-4.1.1/glassfish/modules/cluster-admin.jar
+7fd9ec144000-7fd9ec146000 r--s 00003000 08:07 2633973                    /home/ricardo/glassfish-4.1.1/glassfish/modules/jersey-mvc-jsp.jar
+7fd9ec146000-7fd9ec149000 r--s 0000a000 08:07 2633483                    /home/ricardo/glassfish-4.1.1/glassfish/modules/javax.enterprise.deploy-api.jar
+7fd9ec149000-7fd9ec14b000 r--s 00003000 08:07 2634046                    /home/ricardo/glassfish-4.1.1/glassfish/modules/tyrus-server.jar
+7fd9ec14b000-7fd9ec150000 r--s 0003a000 08:07 2633569                    /home/ricardo/glassfish-4.1.1/glassfish/modules/trilead-ssh2-repackaged.jar
+7fd9ec150000-7fd9ec16c000 r--s 00166000 08:07 2633793                    /home/ricardo/glassfish-4.1.1/glassfish/modules/glassfish-corba-orb.jar
+7fd9ec16c000-7fd9ec16d000 r--s 00001000 08:07 2633330                    /home/ricardo/glassfish-4.1.1/glassfish/lib/embedded/glassfish-embedded-static-shell.jar
+7fd9ec16d000-7fd9ec172000 r--s 00023000 08:07 2898865                    /home/ricardo/.m2/repository/org/apache/maven/surefire/surefire-api/2.10/surefire-api-2.10.jar
+7fd9ec172000-7fd9ec174000 r--s 00007000 08:07 2898867                    /home/ricardo/.m2/repository/org/apache/maven/surefire/surefire-booter/2.10/surefire-booter-2.10.jar
+7fd9ec174000-7fd9ec18f000 r--s 001d6000 08:07 2886263                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7fd9ec18f000-7fd9ec194000 r--s 0003c000 08:07 2886265                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7fd9ec194000-7fd9ec19e000 r--s 00116000 08:07 2886262                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7fd9ec19e000-7fd9ec1b9000 r--s 00394000 08:07 2886258                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7fd9ec1b9000-7fd9ec1ba000 ---p 00000000 00:00 0 
+7fd9ec1ba000-7fd9ec2ba000 rw-p 00000000 00:00 0 
+7fd9ec2ba000-7fd9ec2bd000 ---p 00000000 00:00 0 
+7fd9ec2bd000-7fd9ec3bb000 rw-p 00000000 00:00 0 
+7fd9ec3bb000-7fd9ec3bc000 ---p 00000000 00:00 0 
+7fd9ec3bc000-7fd9ec3bf000 ---p 00000000 00:00 0 
+7fd9ec3bf000-7fd9ec4bc000 rw-p 00000000 00:00 0 
+7fd9ec4bc000-7fd9ec4bd000 ---p 00000000 00:00 0 
+7fd9ec4bd000-7fd9ec4c0000 ---p 00000000 00:00 0 
+7fd9ec4c0000-7fd9ec5bd000 rw-p 00000000 00:00 0 
+7fd9ec5bd000-7fd9ec5be000 ---p 00000000 00:00 0 
+7fd9ec5be000-7fd9ec5c1000 ---p 00000000 00:00 0 
+7fd9ec5c1000-7fd9ec6be000 rw-p 00000000 00:00 0 
+7fd9ec6be000-7fd9ec6c1000 ---p 00000000 00:00 0 
+7fd9ec6c1000-7fd9ec7bf000 rw-p 00000000 00:00 0 
+7fd9ec7bf000-7fd9ec7c2000 ---p 00000000 00:00 0 
+7fd9ec7c2000-7fd9ec8c0000 rw-p 00000000 00:00 0 
+7fd9ec8c0000-7fd9ec8c3000 ---p 00000000 00:00 0 
+7fd9ec8c3000-7fd9ec9c1000 rw-p 00000000 00:00 0 
+7fd9ec9c1000-7fd9ec9c2000 ---p 00000000 00:00 0 
+7fd9ec9c2000-7fd9eda1f000 rw-p 00000000 00:00 0 
+7fd9eda1f000-7fd9edbee000 r--s 03c3b000 08:07 2886287                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7fd9edbee000-7fd9ee8bc000 rw-p 00000000 00:00 0 
+7fd9ee8bc000-7fd9ee8bd000 ---p 00000000 00:00 0 
+7fd9ee8bd000-7fd9ee9bd000 rw-p 00000000 00:00 0 
+7fd9ee9bd000-7fd9ee9be000 ---p 00000000 00:00 0 
+7fd9ee9be000-7fd9eeabe000 rw-p 00000000 00:00 0 
+7fd9eeabe000-7fd9eeabf000 ---p 00000000 00:00 0 
+7fd9eeabf000-7fd9eebbf000 rw-p 00000000 00:00 0 
+7fd9eebbf000-7fd9eebc0000 ---p 00000000 00:00 0 
+7fd9eebc0000-7fd9eed10000 rw-p 00000000 00:00 0 
+7fd9eed10000-7fd9eef4f000 ---p 00000000 00:00 0 
+7fd9eef4f000-7fd9eef9f000 rw-p 00000000 00:00 0 
+7fd9eef9f000-7fd9ef1dd000 ---p 00000000 00:00 0 
+7fd9ef1dd000-7fd9ef2d2000 rw-p 00000000 00:00 0 
+7fd9ef2d2000-7fd9ef325000 ---p 00000000 00:00 0 
+7fd9ef325000-7fd9ef352000 rw-p 00000000 00:00 0 
+7fd9ef352000-7fd9ef6e6000 ---p 00000000 00:00 0 
+7fd9ef6e6000-7fd9ef6e9000 r--p 00000000 08:07 2893036                    /usr/lib/x86_64-linux-gnu/libnss_files-2.29.so
+7fd9ef6e9000-7fd9ef6f0000 r-xp 00003000 08:07 2893036                    /usr/lib/x86_64-linux-gnu/libnss_files-2.29.so
+7fd9ef6f0000-7fd9ef6f2000 r--p 0000a000 08:07 2893036                    /usr/lib/x86_64-linux-gnu/libnss_files-2.29.so
+7fd9ef6f2000-7fd9ef6f3000 r--p 0000b000 08:07 2893036                    /usr/lib/x86_64-linux-gnu/libnss_files-2.29.so
+7fd9ef6f3000-7fd9ef6f4000 rw-p 0000c000 08:07 2893036                    /usr/lib/x86_64-linux-gnu/libnss_files-2.29.so
+7fd9ef6f4000-7fd9ef6fa000 rw-p 00000000 00:00 0 
+7fd9ef6fa000-7fd9ef6fb000 r--s 00000000 08:07 810964                     /home/ricardo/NetBeansProjects/FazTudo2/target/surefire/surefirebooter725377330419517484.jar
+7fd9ef6fb000-7fd9ef6fc000 r--s 0000a000 08:07 2886261                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7fd9ef6fc000-7fd9ef6fe000 r--s 00007000 08:07 3675235                    /usr/share/java/java-atk-wrapper.jar
+7fd9ef6fe000-7fd9ef701000 r--s 00039000 08:07 2886266                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7fd9ef701000-7fd9ef704000 r--p 00000000 08:07 2886244                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd9ef704000-7fd9ef708000 r-xp 00003000 08:07 2886244                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd9ef708000-7fd9ef70a000 r--p 00007000 08:07 2886244                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd9ef70a000-7fd9ef70b000 r--p 00008000 08:07 2886244                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd9ef70b000-7fd9ef70c000 rw-p 00009000 08:07 2886244                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7fd9ef70c000-7fd9ef719000 r--p 00000000 08:07 2886199                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd9ef719000-7fd9ef731000 r-xp 0000d000 08:07 2886199                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd9ef731000-7fd9ef738000 r--p 00025000 08:07 2886199                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd9ef738000-7fd9ef739000 r--p 0002b000 08:07 2886199                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd9ef739000-7fd9ef73b000 rw-p 0002c000 08:07 2886199                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7fd9ef73b000-7fd9ef740000 r--p 00000000 08:07 2886243                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd9ef740000-7fd9ef749000 r-xp 00005000 08:07 2886243                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd9ef749000-7fd9ef74b000 r--p 0000e000 08:07 2886243                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd9ef74b000-7fd9ef74d000 r--p 0000f000 08:07 2886243                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd9ef74d000-7fd9ef74e000 rw-p 00011000 08:07 2886243                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7fd9ef74e000-7fd9ef751000 r--p 00000000 08:07 2893244                    /usr/lib/x86_64-linux-gnu/librt-2.29.so
+7fd9ef751000-7fd9ef755000 r-xp 00003000 08:07 2893244                    /usr/lib/x86_64-linux-gnu/librt-2.29.so
+7fd9ef755000-7fd9ef757000 r--p 00007000 08:07 2893244                    /usr/lib/x86_64-linux-gnu/librt-2.29.so
+7fd9ef757000-7fd9ef758000 r--p 00008000 08:07 2893244                    /usr/lib/x86_64-linux-gnu/librt-2.29.so
+7fd9ef758000-7fd9ef759000 rw-p 00009000 08:07 2893244                    /usr/lib/x86_64-linux-gnu/librt-2.29.so
+7fd9ef759000-7fd9ef75a000 ---p 00000000 00:00 0 
+7fd9ef75a000-7fd9ef75d000 ---p 00000000 00:00 0 
+7fd9ef75d000-7fd9ef85a000 rw-p 00000000 00:00 0 
+7fd9ef85a000-7fd9ef85d000 r--p 00000000 08:07 2892567                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd9ef85d000-7fd9ef86e000 r-xp 00003000 08:07 2892567                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd9ef86e000-7fd9ef872000 r--p 00014000 08:07 2892567                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd9ef872000-7fd9ef873000 r--p 00017000 08:07 2892567                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd9ef873000-7fd9ef874000 rw-p 00018000 08:07 2892567                    /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7fd9ef874000-7fd9ef883000 r--p 00000000 08:07 2892908                    /usr/lib/x86_64-linux-gnu/libm-2.29.so
+7fd9ef883000-7fd9ef929000 r-xp 0000f000 08:07 2892908                    /usr/lib/x86_64-linux-gnu/libm-2.29.so
+7fd9ef929000-7fd9ef9c0000 r--p 000b5000 08:07 2892908                    /usr/lib/x86_64-linux-gnu/libm-2.29.so
+7fd9ef9c0000-7fd9ef9c1000 r--p 0014b000 08:07 2892908                    /usr/lib/x86_64-linux-gnu/libm-2.29.so
+7fd9ef9c1000-7fd9ef9c2000 rw-p 0014c000 08:07 2892908                    /usr/lib/x86_64-linux-gnu/libm-2.29.so
+7fd9ef9c2000-7fd9efa57000 r--p 00000000 08:07 2893340                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+7fd9efa57000-7fd9efb48000 r-xp 00095000 08:07 2893340                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+7fd9efb48000-7fd9efb91000 r--p 00186000 08:07 2893340                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+7fd9efb91000-7fd9efb92000 ---p 001cf000 08:07 2893340                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+7fd9efb92000-7fd9efb9d000 r--p 001cf000 08:07 2893340                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+7fd9efb9d000-7fd9efba0000 rw-p 001da000 08:07 2893340                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.26
+7fd9efba0000-7fd9efba3000 rw-p 00000000 00:00 0 
+7fd9efba3000-7fd9efd92000 r--p 00000000 08:07 2886247                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd9efd92000-7fd9f05e3000 r-xp 001ef000 08:07 2886247                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd9f05e3000-7fd9f0781000 r--p 00a40000 08:07 2886247                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd9f0781000-7fd9f0815000 r--p 00bdd000 08:07 2886247                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd9f0815000-7fd9f083e000 rw-p 00c71000 08:07 2886247                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7fd9f083e000-7fd9f0870000 rw-p 00000000 00:00 0 
+7fd9f0870000-7fd9f0877000 r--p 00000000 08:07 2893178                    /usr/lib/x86_64-linux-gnu/libpthread-2.29.so
+7fd9f0877000-7fd9f0886000 r-xp 00007000 08:07 2893178                    /usr/lib/x86_64-linux-gnu/libpthread-2.29.so
+7fd9f0886000-7fd9f088b000 r--p 00016000 08:07 2893178                    /usr/lib/x86_64-linux-gnu/libpthread-2.29.so
+7fd9f088b000-7fd9f088c000 r--p 0001a000 08:07 2893178                    /usr/lib/x86_64-linux-gnu/libpthread-2.29.so
+7fd9f088c000-7fd9f088d000 rw-p 0001b000 08:07 2893178                    /usr/lib/x86_64-linux-gnu/libpthread-2.29.so
+7fd9f088d000-7fd9f0891000 rw-p 00000000 00:00 0 
+7fd9f0891000-7fd9f0892000 r--p 00000000 08:07 2892426                    /usr/lib/x86_64-linux-gnu/libdl-2.29.so
+7fd9f0892000-7fd9f0894000 r-xp 00001000 08:07 2892426                    /usr/lib/x86_64-linux-gnu/libdl-2.29.so
+7fd9f0894000-7fd9f0895000 r--p 00003000 08:07 2892426                    /usr/lib/x86_64-linux-gnu/libdl-2.29.so
+7fd9f0895000-7fd9f0896000 r--p 00003000 08:07 2892426                    /usr/lib/x86_64-linux-gnu/libdl-2.29.so
+7fd9f0896000-7fd9f0897000 rw-p 00004000 08:07 2892426                    /usr/lib/x86_64-linux-gnu/libdl-2.29.so
+7fd9f0897000-7fd9f0899000 r--p 00000000 08:07 2893594                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fd9f0899000-7fd9f08aa000 r-xp 00002000 08:07 2893594                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fd9f08aa000-7fd9f08b0000 r--p 00013000 08:07 2893594                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fd9f08b0000-7fd9f08b1000 ---p 00019000 08:07 2893594                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fd9f08b1000-7fd9f08b2000 r--p 00019000 08:07 2893594                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fd9f08b2000-7fd9f08b3000 rw-p 0001a000 08:07 2893594                    /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fd9f08b3000-7fd9f08d8000 r--p 00000000 08:07 2892289                    /usr/lib/x86_64-linux-gnu/libc-2.29.so
+7fd9f08d8000-7fd9f0a4b000 r-xp 00025000 08:07 2892289                    /usr/lib/x86_64-linux-gnu/libc-2.29.so
+7fd9f0a4b000-7fd9f0a94000 r--p 00198000 08:07 2892289                    /usr/lib/x86_64-linux-gnu/libc-2.29.so
+7fd9f0a94000-7fd9f0a97000 r--p 001e0000 08:07 2892289                    /usr/lib/x86_64-linux-gnu/libc-2.29.so
+7fd9f0a97000-7fd9f0a9a000 rw-p 001e3000 08:07 2892289                    /usr/lib/x86_64-linux-gnu/libc-2.29.so
+7fd9f0a9a000-7fd9f0a9e000 rw-p 00000000 00:00 0 
+7fd9f0a9e000-7fd9f0a9f000 r--s 00010000 08:07 2886267                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7fd9f0a9f000-7fd9f0aa1000 r--s 00008000 08:07 2886264                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7fd9f0aa1000-7fd9f0aa3000 r--s 00001000 08:07 2886259                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7fd9f0aa3000-7fd9f0aa6000 r--s 0000f000 08:07 2886260                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7fd9f0aa6000-7fd9f0aae000 rw-s 00000000 08:07 2359742                    /tmp/hsperfdata_ricardo/7465
+7fd9f0aae000-7fd9f0aaf000 rw-p 00000000 00:00 0 
+7fd9f0aaf000-7fd9f0ab0000 ---p 00000000 00:00 0 
+7fd9f0ab0000-7fd9f0ab2000 r--p 00000000 08:07 2886185                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fd9f0ab2000-7fd9f0abb000 r-xp 00002000 08:07 2886185                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fd9f0abb000-7fd9f0abe000 r--p 0000b000 08:07 2886185                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fd9f0abe000-7fd9f0abf000 r--p 0000d000 08:07 2886185                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fd9f0abf000-7fd9f0ac0000 rw-p 0000e000 08:07 2886185                    /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7fd9f0ac0000-7fd9f0ac2000 rw-p 00000000 00:00 0 
+7fd9f0ac2000-7fd9f0ac3000 r--p 00000000 08:07 2892069                    /usr/lib/x86_64-linux-gnu/ld-2.29.so
+7fd9f0ac3000-7fd9f0ae4000 r-xp 00001000 08:07 2892069                    /usr/lib/x86_64-linux-gnu/ld-2.29.so
+7fd9f0ae4000-7fd9f0aec000 r--p 00022000 08:07 2892069                    /usr/lib/x86_64-linux-gnu/ld-2.29.so
+7fd9f0aec000-7fd9f0aed000 r--p 00029000 08:07 2892069                    /usr/lib/x86_64-linux-gnu/ld-2.29.so
+7fd9f0aed000-7fd9f0aee000 rw-p 0002a000 08:07 2892069                    /usr/lib/x86_64-linux-gnu/ld-2.29.so
+7fd9f0aee000-7fd9f0aef000 rw-p 00000000 00:00 0 
+7fff69d1b000-7fff69d3c000 rw-p 00000000 00:00 0                          [stack]
+7fff69de7000-7fff69dea000 r--p 00000000 00:00 0                          [vvar]
+7fff69dea000-7fff69deb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: /home/ricardo/NetBeansProjects/FazTudo2/target/surefire/surefirebooter725377330419517484.jar /home/ricardo/NetBeansProjects/FazTudo2/target/surefire/surefire4257991768717705828tmp /home/ricardo/NetBeansProjects/FazTudo2/target/surefire/surefire5509342752962003009tmp
+java_class_path (initial): /home/ricardo/NetBeansProjects/FazTudo2/target/surefire/surefirebooter725377330419517484.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+USERNAME=ricardo
+LD_LIBRARY_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/i386:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa1f680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa1f680], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x87ede0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x87ede0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x87ede0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x87ede0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x87ec80], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x87f060], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: [libjvm.so+0x87f060], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x87f060], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=19.04
+DISTRIB_CODENAME=disco
+DISTRIB_DESCRIPTION="Ubuntu 19.04"
+
+uname:Linux 5.0.0-15-generic #16-Ubuntu SMP Mon May 6 17:41:33 UTC 2019 x86_64
+libc:glibc 2.29 NPTL 2.29 
+rlimit: STACK 8192k, CORE 0k, NPROC 31220, NOFILE 1048576, AS infinity
+load average:1,22 0,95 0,92
+
+/proc/meminfo:
+MemTotal:        8041208 kB
+MemFree:         2165316 kB
+MemAvailable:    4033068 kB
+Buffers:          194476 kB
+Cached:          2167076 kB
+SwapCached:            0 kB
+Active:          4079412 kB
+Inactive:        1229936 kB
+Active(anon):    3141476 kB
+Inactive(anon):   139640 kB
+Active(file):     937936 kB
+Inactive(file):  1090296 kB
+Unevictable:      191900 kB
+Mlocked:              48 kB
+SwapTotal:       2097148 kB
+SwapFree:        2097148 kB
+Dirty:             71796 kB
+Writeback:             0 kB
+AnonPages:       3139628 kB
+Mapped:           724316 kB
+Shmem:            333324 kB
+KReclaimable:     129888 kB
+Slab:             232036 kB
+SReclaimable:     129888 kB
+SUnreclaim:       102148 kB
+KernelStack:       13040 kB
+PageTables:        27384 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6117752 kB
+Committed_AS:    8102124 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+Percpu:             2144 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      250692 kB
+DirectMap2M:     8013824 kB
+DirectMap1G:           0 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-3
+cpu_memory_nodes: 0
+active_processor_count: 4
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 4200607744
+memory_max_usage_in_bytes: 4571840512
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+stepping	: 9
+microcode	: 0xb4
+cpu MHz		: 3500.197
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+stepping	: 9
+microcode	: 0xb4
+cpu MHz		: 3500.007
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+stepping	: 9
+microcode	: 0xb4
+cpu MHz		: 3499.999
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz
+stepping	: 9
+microcode	: 0xb4
+cpu MHz		: 3500.006
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds
+bogomips	: 5808.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8041208k(2165316k free), swap 2097148k(2097148k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.212-b03) for linux-amd64 JRE (1.8.0_212-8u212-b03-0ubuntu1.19.04.2-b03), built on Apr 26 2019 01:04:36 by "buildd" with gcc 8.3.0
+
+time: Wed May 29 21:10:23 2019
+timezone: -03
+elapsed time: 7 seconds (0d 0h 0m 7s)
+

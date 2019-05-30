@@ -40,13 +40,13 @@ import javax.persistence.Table;
         {
             @NamedQuery(
                     name = "Cliente.porNivel",
-                    query = "select c FROM Cliente c WHERE c.nivel LIKE :nivel"
+                    query = "select c FROM Cliente c WHERE c.nivel LIKE ?1"
             )
             ,
             
             @NamedQuery( // é mais interessante colocar essa query em usuário?
                     name = "Cliente.porNome",
-                    query = "select c FROM Cliente c WHERE c.nome LIKE :nome ORDER BY c.nome DESC"
+                    query = "select c FROM Cliente c WHERE c.nome LIKE ?1 ORDER BY c.nome DESC"
             )
         }
 )

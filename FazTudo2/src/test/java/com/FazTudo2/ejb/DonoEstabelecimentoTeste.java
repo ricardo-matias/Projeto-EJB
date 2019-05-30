@@ -64,7 +64,7 @@ public class DonoEstabelecimentoTeste extends Teste {
     
     @Test(expected = EJBException.class)
     public void atualizarDonoinvalido() {
-        DonoEstabelecimento dono = donoServico.donoPorNome("Ricardo Matias").get(0);
+        DonoEstabelecimento dono = donoServico.donoPorNome("Natanael Lemos").get(0);
         dono.setCpf("222.111.444-98");//cpf invalido
         
         try {

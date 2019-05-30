@@ -60,7 +60,8 @@ public abstract class Usuario extends Entidade implements Serializable {
     protected String login;
 
     @Pattern(regexp = "((?=.*\\p{Digit})(?=.*\\p{Lower})(?=.*\\p{Upper})(?=.*\\p{Punct}).{6,20})", 
-            message = "{exemplo.jpa.Usuario.senha}")
+            message = "A senha deve conter no minimo 6 caracteres, 1 letra maiuscula, 1 miniuscula, "
+                    + "e um caractere especial")
     @Column(name = "txt_senha", length = 20, nullable = false)
     protected String senha;
     
