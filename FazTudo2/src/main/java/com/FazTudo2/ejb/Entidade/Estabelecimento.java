@@ -43,10 +43,14 @@ import org.hibernate.validator.constraints.br.CNPJ;
 @NamedQueries(
         {
             @NamedQuery(
-                    name = "Estabelecimento.status",
-                    query = "SELECT e FROM Estabelecimento e WHERE e.status LIKE :status ORDER BY e.status DESC"
+                    name = "Estabelecimento.porStatus",
+                    query = "SELECT e FROM Estabelecimento e WHERE e.status LIKE ?1 ORDER BY e.status DESC"
             ),
  
+            @NamedQuery(
+                    name = "Estabelecimento.porCNPJ",
+                    query = "SELECT e FROM Estabelecimento e WHERE e.cnpj LIKE ?1"
+            )
         }
 )
 

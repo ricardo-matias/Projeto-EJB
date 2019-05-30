@@ -34,13 +34,13 @@
     
     <!-- ** Para teste 1 dono mais de um estabelecimento ** -->
     <!-- Estabelecimento id = 1 (dono -> Ricardo Matias id = 1)-->
-    <tb_estabelecimento id = "1" txt_cnpj = "14.970.257/0001-80" txt_nome = "Barbearia do Malicius" txt_status = "Aprovado"
+    <tb_estabelecimento id = "1" txt_cnpj = "14.970.257/0001-80" txt_nome = "Barbearia do Malicius" txt_status = "Disponível"
                         end_txt_bairro = "Arthur 2" end_txt_cep = "53415663" end_txt_cidade = "Paulista"
                         end_txt_complemento = "A" end_txt_estado = "Pernambuco" end_numero = "110" 
                         end_txt_rua = "Teste" NUM_VERSAO="1"/>
     <tb_estabelecimento_dono_estabelecimento id_usuario = "1" id_estabelecimento = "1" />
     <!-- Estabelecimento id = 2 (dono -> Ricardo Matias id = 1)-->
-    <tb_estabelecimento id = "2" txt_cnpj = "15.530.164/0001-06" txt_nome = "Barbearia Bom de Tesoura" txt_status = "Aprovado"
+    <tb_estabelecimento id = "2" txt_cnpj = "15.530.164/0001-06" txt_nome = "Barbearia Bom de Tesoura" txt_status = "Disponível"
                         end_txt_bairro = "Arthur 5" end_txt_cep = "53415672" end_txt_cidade = "Paulista"
                         end_txt_complemento = "C" end_txt_estado = "Pernambuco" end_numero = "202" 
                         end_txt_rua = "Teste" NUM_VERSAO="1"/>
@@ -48,23 +48,23 @@
     
     <!-- ** Para teste de remorção de estabelecimento sem relacionamento (sem sentido, porém para teste inicial) ** -->
     <!-- Estabelecimento id = 3 (sem dono)-->
-    <tb_estabelecimento id = "3" txt_cnpj = "02.722.823/0001-56" txt_nome = "Bar do Guilherme" txt_status = "Aprovado"
+    <tb_estabelecimento id = "3" txt_cnpj = "02.722.823/0001-56" txt_nome = "Bar do Guilherme" txt_status = "Disponível"
                         end_txt_bairro = "Nossa Senhora do Ó" end_txt_cep = "53431705" end_txt_cidade = "Paulista"
                         end_txt_complemento = "C" end_txt_estado = "Pernambuco" end_numero = "202" 
                         end_txt_rua = "Rua Job Vieira de Lima" NUM_VERSAO="1"/>
     
     <!-- ** Para teste de estabelecimento com mais de um dono ** -->
-    <tb_estabelecimento id = "4" txt_cnpj = "02.965.201/0001-59" txt_nome = "Lanchonete dos Anões" txt_status = "Aprovado"
+    <tb_estabelecimento id = "4" txt_cnpj = "02.965.201/0001-59" txt_nome = "Lanchonete dos Anões" txt_status = "Disponível"
                         end_txt_bairro = "Coqueiral" end_txt_cep = "50791362" end_txt_cidade = "Recife"
                         end_txt_estado = "Pernambuco" end_numero = "81" 
                         end_txt_rua = "Rua do Hortelã" NUM_VERSAO="1"/>
     
     <!-- ** Para teste de estabelecimento relacionado com serviço ** -->
-    <tb_estabelecimento id = "5" txt_cnpj = "77.281.872/0001-08" txt_nome = "Lava Jato Fast" txt_status = "Aprovado"
+    <tb_estabelecimento id = "5" txt_cnpj = "77.281.872/0001-08" txt_nome = "Lava Jato Fast" txt_status = "Disponível"
                         end_txt_bairro = "Alameda" end_txt_cep = "65199362" end_txt_cidade = "Paulista"
                         end_txt_estado = "Pernambuco" end_numero = "81" 
                         end_txt_rua = "Rua das Oliveiras" NUM_VERSAO="1"/>
-    <tb_estabelecimento id = "6" txt_cnpj = "40.883.279/0001-13" txt_nome = "Roupas for All" txt_status = "Aprovado"
+    <tb_estabelecimento id = "6" txt_cnpj = "40.883.279/0001-13" txt_nome = "Roupas for All" txt_status = "Disponível"
                         end_txt_bairro = "Alameda" end_txt_cep = "65199390" end_txt_cidade = "Paulista"
                         end_txt_estado = "Pernambuco" end_numero = "44" 
                         end_txt_rua = "Rua das Mangueiras" NUM_VERSAO="1"/>

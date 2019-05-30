@@ -1,16 +1,18 @@
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Foto.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Endereco.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Beans/CategoriaBean.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/Servico.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/DonoEstabelecimentoServico.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Cliente.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/validacoes/ValidaPalavrao.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Entidade.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/DonoEstabelecimento.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/HorarioMarcado.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Categoria.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Estabelecimento.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Usuario.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/validacoes/ValidadorPalavrao.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/CategoriaServico.java
-/home/ricardo/NetBeansProjects/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Servico.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/HorarioMarcado.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Entidade.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Endereco.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/ClienteServico.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Foto.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/DonoEstabelecimento.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/DonoEstabelecimentoServico.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Categoria.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Cliente.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/EstabelecimentoServico.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/Servico.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Servicos/CategoriaServico.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Beans/CategoriaBean.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/validacoes/ValidadorPalavrao.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/validacoes/ValidaPalavrao.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Usuario.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Estabelecimento.java
+/home/ricardo/Área de Trabalho/CoporativoEJB/FazTudo2/src/main/java/com/FazTudo2/ejb/Entidade/Servico.java

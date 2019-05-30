@@ -6,6 +6,7 @@
 package com.FazTudo2.ejb.Servicos;
 
 import com.FazTudo2.ejb.Entidade.Cliente;
+import com.FazTudo2.ejb.Entidade.Estabelecimento;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
@@ -18,36 +19,38 @@ import javax.validation.executable.ExecutableType;
 import javax.validation.executable.ValidateOnExecution;
 import org.hibernate.validator.constraints.NotBlank;
 
-@Stateless(name = "ejb/ClienteServico")
+@Stateless(name = "ejb/EstabelecimentoServico")
 @LocalBean
 @ValidateOnExecution(type = ExecutableType.ALL)
-public class ClienteServico extends Servico<Cliente> {
+public class EstabelecimentoServico extends Servico<Estabelecimento> {
 
     @PostConstruct
     public void init() {
-        super.setClasse(Cliente.class);
+        super.setClasse(Estabelecimento.class);
     }
 
     @Override
-    public Cliente criar() {
-        return new Cliente();
+    public Estabelecimento criar() {
+        return new Estabelecimento();
     }
      
     @Override
-    public boolean existe(@NotNull Cliente entidade) {
-        TypedQuery<Cliente> query
-                = entityManager.createNamedQuery("Cliente.porNome", Cliente.class);
-        query.setParameter(1, entidade.getNome());
+    public boolean existe(@NotNull Estabelecimento entidade) {
+        TypedQuery<Estabelecimento> query
+                = entityManager.createNamedQuery("Estabelecimento.porCNPJ", Estabelecimento.class);
+        query.setParameter(1, entidade.getCnpj());
         return !query.getResultList().isEmpty();
     }
 
     @TransactionAttribute(SUPPORTS)
-    public List<Cliente> clientePorNome(@NotBlank String nome) {
-        return super.consultarEntidades(new Object[] {nome}, "Cliente.porNome");
+    public Estabelecimento estabelecimentoPorCNPJ(@NotBlank String cnpj) {
+        return super.consultarEntidade(new Object[] {cnpj}, "Estabelecimento.porCNPJ");
     }
     
     @TransactionAttribute(SUPPORTS)
-    public List<Cliente> clientePorNivel(@NotNull int nivel) { // ----REVISAR---- parametros
-        return super.consultarEntidades(new Object[] {nivel}, "Cliente.porNivel");
+    public List<Estabelecimento> estabelecimentoPorStatus(@NotBlank String status) { // ----REVISAR---- parametros
+        return super.consultarEntidades(new Object[] {status}, "Estabelecimento.porStatus");
     }    
+    
+    // estabelecimento por categoria
 }

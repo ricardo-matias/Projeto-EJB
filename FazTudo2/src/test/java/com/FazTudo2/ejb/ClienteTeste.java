@@ -8,6 +8,7 @@ package com.FazTudo2.ejb;
 import com.FazTudo2.ejb.Entidade.Cliente;
 import com.FazTudo2.ejb.Servicos.ClienteServico;
 import com.FazTudo2.ejb.Servicos.DonoEstabelecimentoServico;
+import java.util.List;
 import javax.ejb.EJBException;
 import javax.naming.NamingException;
 import javax.validation.ConstraintViolation;
@@ -52,9 +53,20 @@ public class ClienteTeste extends Teste {
     
     @Test
     public void consultarClientePorNome() {
-        Cliente cliente = clienteServico.clientePorNome("Diego Santos").get(0);
-        assertNotNull(cliente);
-        assertEquals("Diego Santos", cliente.getNome());
+        List<Cliente> clientes = clienteServico.clientePorNome("Diego Santos");
+        assertEquals(1, clientes.size());
+        assertNotNull(clientes.get(0).getId());
+        assertEquals("Diego Santos", clientes.get(0).getNome());
+    }
+    
+    @Test
+    public void consultarClientePorNivel() {
+        List<Cliente> clientes = clienteServico.clientePorNivel(1);
+        assertEquals(2, clientes.size());
+        
+        for(Cliente cliente: clientes) {
+            assertTrue(cliente.getNome().equals("Nicolas Melo") || cliente.getNome().equals("Cliente Falso"));
+        }
     }
 
     @Test
