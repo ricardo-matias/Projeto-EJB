@@ -47,8 +47,9 @@ public class ClienteTeste extends Teste {
 
     @Test
     public void consultarDonoPorId() {
-        assertNotNull(clienteServico.consultarPorId(2L).getId());
-        assertEquals("Diego Santos", clienteServico.consultarPorId(2L).getNome());
+        Cliente cliente = clienteServico.consultarPorId(2L);
+        assertNotNull(cliente.getId());
+        assertEquals("Diego Santos", cliente.getNome());
     }
     
     @Test
@@ -71,7 +72,9 @@ public class ClienteTeste extends Teste {
 
     @Test
     public void atualizarCliente() {
-        Cliente cliente = clienteServico.clientePorNome("Marcos Vinicius").get(0); // testar size?
+        List<Cliente> clientes = clienteServico.clientePorNome("Marcos Vinicius");
+        assertEquals(1, clientes.size());
+        Cliente cliente = clientes.get(0);
         cliente.setNome("Marcos Brasileiro");
         cliente.setNivel(5);
         cliente = clienteServico.atualizar(cliente);

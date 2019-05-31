@@ -50,12 +50,12 @@ public class CategoriaServico extends ServicoBean<Categoria> {
         return c;
     }
     
-    public boolean existe(@NotNull Categoria entidade) {
+    /*public boolean existe(@NotNull Categoria entidade) {
         TypedQuery<Categoria> query
                 = entityManager.createNamedQuery("Categoria.porNome", Categoria.class);
         query.setParameter("nome", entidade.getNome());
         return !query.getResultList().isEmpty();
-    }
+    }*/
 
     public Categoria atualizaCategoria(Categoria categoria) {
         categoria = entityManager.merge(categoria);

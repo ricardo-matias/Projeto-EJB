@@ -43,8 +43,9 @@ public class CategoriaTeste extends Teste {
 
     @Test
     public void consultarCategoriaPorId() {
-        assertNotNull(categoriaServico.consultarCategoriaPorId(2L).getId());
-        assertEquals("Esporte", categoriaServico.consultarCategoriaPorId(2L).getNome());
+        Categoria categoria = categoriaServico.consultarCategoriaPorId(2L);
+        assertNotNull(categoria.getId());
+        assertEquals("Esporte", categoria.getNome());
     }
     
     @Test
@@ -60,7 +61,6 @@ public class CategoriaTeste extends Teste {
         Categoria categoria = categoriaServico.criar();
         categoria.setNome("Teste EJB");
         categoriaServico.persistir(categoria);
-        assertNotNull(categoria.getId());
         assertTrue(categoriaServico.existe(categoria));
     } 
     

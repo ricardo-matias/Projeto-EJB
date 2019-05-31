@@ -19,6 +19,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedNativeQueries;
 import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -31,16 +33,27 @@ import javax.validation.constraints.Future;
 @Entity
 @Table(name="tb_horarios_marcados")
 @Access(AccessType.FIELD)
+
 @NamedNativeQueries (
-        @NamedNativeQuery (
-                name = "Horario.porNivel_e_Comparecimento",
-                query = "SELECT DISTINCT " +
-                        "hr.id, hr.comparecimento, hr.data, hr.id_cliente, hr.id_servico " +
-                        "FROM tb_horarios_marcados hr " +
-                        "INNER JOIN tb_cliente c ON c.id_usuario = hr.id_cliente " +
-                        "WHERE c.nivel = ?1 AND hr.comparecimento = ?2",
-                resultClass = HorarioMarcado.class
-        )
+        {
+            @NamedNativeQuery (
+                    name = "Horario.porNivel_e_Comparecimento",
+                    query = "SELECT DISTINCT " +
+                            "hr.id, hr.comparecimento, hr.data, hr.id_cliente, hr.id_servico " +
+                            "FROM tb_horarios_marcados hr " +
+                            "INNER JOIN tb_cliente c ON c.id_usuario = hr.id_cliente " +
+                            "WHERE c.nivel = ?1 AND hr.comparecimento = ?2",
+                    resultClass = HorarioMarcado.class
+            ),    
+            @NamedNativeQuery (
+                    name = "Horario.porData2",
+                    query = "SELECT DISTINCT " +
+                            "hr.id, hr.comparecimento, hr.data, hr.id_cliente, hr.id_servico " +
+                            "FROM tb_horarios_marcados hr " +
+                            "WHERE date(hr.data) = ?1",
+                    resultClass = HorarioMarcado.class
+            )
+        }
 )
 public class HorarioMarcado extends Entidade implements Serializable{
     

@@ -7,6 +7,7 @@ package com.FazTudo2.ejb;
 
 import com.FazTudo2.ejb.Entidade.DonoEstabelecimento;
 import com.FazTudo2.ejb.Servicos.DonoEstabelecimentoServico;
+import java.util.List;
 import javax.ejb.EJBException;
 import javax.naming.NamingException;
 import javax.validation.ConstraintViolation;
@@ -45,16 +46,19 @@ public class DonoEstabelecimentoTeste extends Teste {
 
     @Test
     public void consultarDonoPorId() {
-        assertNotNull(donoServico.consultarPorId(4L).getId());
-        assertEquals("Zangado Teste", donoServico.consultarPorId(4L).getNome());
+        DonoEstabelecimento dono = donoServico.consultarPorId(4L);
+        assertNotNull(dono.getId());
+        assertEquals("Zangado Teste", dono.getNome());
     }
     
     @Test
     public void atualizarDono() {
-        DonoEstabelecimento dono = donoServico.donoPorNome("Ricardo Matias").get(0);
-        dono.setNome("RICARDUA");
+        List<DonoEstabelecimento> donos = donoServico.donoPorNome("Ricardo Matias");
+        assertEquals(1, donos.size());
+        DonoEstabelecimento dono = donos.get(0);
+        dono.setNome("Ricardo Júnior");
         dono = donoServico.atualizar(dono);
-        assertEquals("RICARDUA", dono.getNome());
+        assertEquals("Ricardo Júnior", dono.getNome());
     }
     
     @Test(expected = EJBException.class)
@@ -80,9 +84,10 @@ public class DonoEstabelecimentoTeste extends Teste {
     
     @Test
     public void consultarDonoPorNome() {
-        DonoEstabelecimento dono = donoServico.donoPorNome("Zangado Teste").get(0);
-        assertNotNull(dono);
-        assertEquals("Zangado Teste", dono.getNome());
+        List<DonoEstabelecimento> donos = donoServico.donoPorNome("Zangado Teste");
+        assertEquals(1, donos.size());
+        //assertNotNull(donos.get(0).getId());
+        assertEquals("Zangado Teste", donos.get(0).getNome());
     }
     
     @Test

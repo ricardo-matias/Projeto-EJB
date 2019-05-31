@@ -49,8 +49,9 @@ public class ServicoTeste extends Teste {
 
     @Test
     public void consultarServicoPorId() {
-        assertNotNull(servicoServico.consultarPorId(1L).getId());
-        assertEquals("Costura de roupas", servicoServico.consultarPorId(1L).getNome());
+        Servico servico = servicoServico.consultarPorId(1L);
+        assertNotNull(servico.getId());
+        assertEquals("Costura de roupas", servico.getNome());
     }
     
     @Test
@@ -68,7 +69,7 @@ public class ServicoTeste extends Teste {
 
     @Test
     public void atualizarServico() {
-        Servico servico = servicoServico.consultarPorId(3L); // testar size?
+        Servico servico = servicoServico.consultarPorId(3L);
         assertEquals("Venda de roupas", servico.getNome());
         servico.setNome("Comércio de vestimentas");
         servico = servicoServico.atualizar(servico);

@@ -12,6 +12,9 @@ import com.FazTudo2.ejb.Servicos.ClienteServico;
 import com.FazTudo2.ejb.Servicos.DonoEstabelecimentoServico;
 import com.FazTudo2.ejb.Servicos.HorarioMarcadoServico;
 import com.FazTudo2.ejb.Servicos.ServicoServico;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.ejb.EJBException;
 import javax.naming.NamingException;
@@ -54,13 +57,26 @@ public class HorarioMarcadoTeste extends Teste {
 
     @Test
     public void consultarHorarioPorId() {
-        assertNotNull(horarioServico.consultarPorId(1L).getId());
-        assertEquals(true, horarioServico.consultarPorId(1L).getComparecimento());
+        HorarioMarcado horario = horarioServico.consultarPorId(1L);
+        assertNotNull(horario.getId());
+        assertEquals(true, horario.getComparecimento());
+    }
+
+    @Test
+    public void consultarHorarioPorData() throws ParseException {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        Date d = formato.parse("22/06/2020");
+        HorarioMarcado horario = horarioServico.horarioPorData(d).get(0);
+        assertNotNull(horario.getId());
+        assertEquals(true, horario.getComparecimento());
+        assertEquals(d.getDay(), horario.getData().getDay());
+        assertEquals(d.getMonth(), horario.getData().getMonth());
+        assertEquals(d.getYear(), horario.getData().getYear());
     }
  
     @Test
     public void aualizarHorario() {
-        HorarioMarcado horario = horarioServico.consultarPorId(2L);
+        HorarioMarcado horario = horarioServico.consultarPorId(4L);
         assertEquals(false, horario.getComparecimento());
         horario.setComparecimento(true);
         horario = horarioServico.atualizar(horario);

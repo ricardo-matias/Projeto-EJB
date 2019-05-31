@@ -52,5 +52,10 @@ public class EstabelecimentoServico extends ServicoBean<Estabelecimento> {
         return super.consultarEntidades(new Object[] {status}, "Estabelecimento.porStatus");
     }    
     
-    // estabelecimento por categoria
+    @TransactionAttribute(SUPPORTS)
+    public List<Estabelecimento> estabelecimentoPorCategoria(@NotBlank String categoria) { 
+        return super.consultarEntidades(new Object[] {categoria}, "Estabelecimento.porCategoriasNative");
+    } 
+    
+    // estabelecimento por categoria horarioServico.consultarPorId(1L)
 }

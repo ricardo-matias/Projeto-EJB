@@ -5,19 +5,11 @@
  */
 package com.FazTudo2.ejb;
 
-import com.FazTudo2.ejb.Entidade.Cliente;
 import com.FazTudo2.ejb.Entidade.Endereco;
 import com.FazTudo2.ejb.Entidade.Estabelecimento;
-import com.FazTudo2.ejb.Servicos.ClienteServico;
-import com.FazTudo2.ejb.Servicos.DonoEstabelecimentoServico;
 import com.FazTudo2.ejb.Servicos.EstabelecimentoServico;
 import java.util.List;
-import javax.ejb.EJBException;
 import javax.naming.NamingException;
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
-import org.hamcrest.CoreMatchers;
-import static org.hamcrest.CoreMatchers.startsWith;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -50,8 +42,9 @@ public class EstabelecimentoTeste extends Teste {
 
     @Test
     public void consultarEstabelecimentoPorId() {
-        assertNotNull(estabelecimentoServico.consultarPorId(1L).getId());
-        assertEquals("Barbearia do Malicius", estabelecimentoServico.consultarPorId(1L).getNome());
+        Estabelecimento estabelecimento = estabelecimentoServico.consultarPorId(1L);
+        assertNotNull(estabelecimento.getId());
+        assertEquals("Barbearia do Malicius", estabelecimento.getNome());
     }
     
     @Test
@@ -68,6 +61,16 @@ public class EstabelecimentoTeste extends Teste {
         assertEquals("Barbearia do Malicius", estabelecimento.getNome());
     }
 
+    @Test
+    public void consultarEstabelecimentoPorCategoriaServico() {
+        List<Estabelecimento> estabelecimentos = estabelecimentoServico
+                .estabelecimentoPorCategoria("Beleza");
+        assertEquals(2, estabelecimentos.size());
+        
+        for(Estabelecimento estabelecimento : estabelecimentos) 
+            assertTrue(estabelecimento.getNome().startsWith("Barbearia"));
+    }
+    
     @Test
     public void atualizarEstabelecimento() {
         Estabelecimento estabelecimento = estabelecimentoServico

@@ -7,6 +7,7 @@ package com.FazTudo2.ejb.Servicos;
 
 import com.FazTudo2.ejb.Entidade.Cliente;
 import com.FazTudo2.ejb.Entidade.HorarioMarcado;
+import java.util.Date;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
@@ -41,6 +42,11 @@ public class HorarioMarcadoServico extends ServicoBean<HorarioMarcado> {
         query.setParameter(1, entidade.getCliente().getNivel());
         query.setParameter(2, entidade.getComparecimento());
         return !query.getResultList().isEmpty();
+    }
+    
+    @TransactionAttribute(SUPPORTS)
+    public List<HorarioMarcado> horarioPorData(@NotNull Date data) {
+        return super.consultarEntidades(new Object[] {data}, "Horario.porData2");
     }
 
     @TransactionAttribute(SUPPORTS)
