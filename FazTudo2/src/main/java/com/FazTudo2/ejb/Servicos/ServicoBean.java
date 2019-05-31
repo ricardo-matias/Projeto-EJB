@@ -29,7 +29,7 @@ import javax.validation.constraints.NotNull;
  */
 @TransactionManagement(CONTAINER)
 @TransactionAttribute(REQUIRED)
-public abstract class Servico<T extends Entidade> {
+public abstract class ServicoBean<T extends Entidade> {
 
     @PersistenceContext(name = "exemplo_13_ejb", type = TRANSACTION)
     protected EntityManager entityManager;

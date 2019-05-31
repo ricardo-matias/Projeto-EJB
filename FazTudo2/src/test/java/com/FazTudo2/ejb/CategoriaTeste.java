@@ -49,9 +49,10 @@ public class CategoriaTeste extends Teste {
     
     @Test
     public void consultarCategoriaPorNome() {
-        Categoria categoria = categoriaServico.categoriaPorNome("Esporte").get(0);
-        assertNotNull(categoria);
-        assertEquals("Esporte", categoria.getNome());
+        List<Categoria> categorias = categoriaServico.categoriaPorNome("Esporte");
+        assertEquals(1, categorias.size());
+        assertNotNull(categorias.get(0).getId());
+        assertEquals("Esporte", categorias.get(0).getNome());
     }
     
     @Test

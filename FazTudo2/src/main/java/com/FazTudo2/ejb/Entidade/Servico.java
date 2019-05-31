@@ -40,7 +40,7 @@ import validacoes.ValidaPalavrao;
         {
             @NamedQuery(
                     name = "Servico.porNome",
-                    query = "select s FROM Servico s WHERE s.nome LIKE :nome"
+                    query = "select s FROM Servico s WHERE s.nome LIKE ?1"
             )
         }
 )

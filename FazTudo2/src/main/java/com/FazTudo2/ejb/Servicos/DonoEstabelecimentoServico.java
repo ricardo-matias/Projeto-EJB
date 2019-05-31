@@ -28,7 +28,7 @@ import org.hibernate.validator.constraints.br.CPF;
 @Stateless(name = "ejb/DonoEstabelecimentoServico")
 @LocalBean
 @ValidateOnExecution(type = ExecutableType.ALL)
-public class DonoEstabelecimentoServico extends Servico<DonoEstabelecimento> {
+public class DonoEstabelecimentoServico extends ServicoBean<DonoEstabelecimento> {
 
     @PostConstruct
     public void init() {

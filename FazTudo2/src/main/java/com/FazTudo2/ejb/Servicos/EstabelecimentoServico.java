@@ -22,7 +22,7 @@ import org.hibernate.validator.constraints.NotBlank;
 @Stateless(name = "ejb/EstabelecimentoServico")
 @LocalBean
 @ValidateOnExecution(type = ExecutableType.ALL)
-public class EstabelecimentoServico extends Servico<Estabelecimento> {
+public class EstabelecimentoServico extends ServicoBean<Estabelecimento> {
 
     @PostConstruct
     public void init() {

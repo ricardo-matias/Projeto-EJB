@@ -38,7 +38,7 @@ import javax.validation.constraints.Future;
                         "hr.id, hr.comparecimento, hr.data, hr.id_cliente, hr.id_servico " +
                         "FROM tb_horarios_marcados hr " +
                         "INNER JOIN tb_cliente c ON c.id_usuario = hr.id_cliente " +
-                        "WHERE c.nivel <= ?1 AND hr.comparecimento = ?2",
+                        "WHERE c.nivel = ?1 AND hr.comparecimento = ?2",
                 resultClass = HorarioMarcado.class
         )
 )

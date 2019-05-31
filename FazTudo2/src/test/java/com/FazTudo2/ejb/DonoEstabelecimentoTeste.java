@@ -5,13 +5,8 @@
  */
 package com.FazTudo2.ejb;
 
-import com.FazTudo2.ejb.Entidade.Categoria;
 import com.FazTudo2.ejb.Entidade.DonoEstabelecimento;
-import com.FazTudo2.ejb.Entidade.Servico;
-import com.FazTudo2.ejb.Servicos.CategoriaServico;
 import com.FazTudo2.ejb.Servicos.DonoEstabelecimentoServico;
-import java.math.BigDecimal;
-import java.util.List;
 import javax.ejb.EJBException;
 import javax.naming.NamingException;
 import javax.validation.ConstraintViolation;
