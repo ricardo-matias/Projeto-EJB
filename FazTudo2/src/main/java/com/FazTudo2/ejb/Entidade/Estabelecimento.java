@@ -74,7 +74,6 @@ public class Estabelecimento extends Entidade implements Serializable {
     @Column(name = "txt_nome", length = 100, nullable = false)
     private String nome;
 
-    //@CNPJ
     @Column(name = "txt_cnpj", length = 25, nullable = false, unique = true)
     private String cnpj;
 

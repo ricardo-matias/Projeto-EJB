@@ -6,6 +6,7 @@
 package com.FazTudo2.ejb.Servicos;
 
 import com.FazTudo2.ejb.Entidade.Categoria;
+import com.FazTudo2.ejb.Entidade.Cliente;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
@@ -43,29 +44,17 @@ public class CategoriaServico extends ServicoBean<Categoria> {
         entityManager.persist(categoria);
     }
     
-    @TransactionAttribute(SUPPORTS)
-    public Categoria consultarCategoriaPorId(@NotNull Long idCategoria) {
-        Categoria c = new Categoria();
-        c = super.consultarPorId(idCategoria);
-        return c;
-    }
-    
-    /*public boolean existe(@NotNull Categoria entidade) {
+  
+    @Override
+    public boolean existe(@NotNull Categoria entidade) {
         TypedQuery<Categoria> query
                 = entityManager.createNamedQuery("Categoria.porNome", Categoria.class);
-        query.setParameter("nome", entidade.getNome());
+        query.setParameter(1, entidade.getNome());
         return !query.getResultList().isEmpty();
-    }*/
-
-    public Categoria atualizaCategoria(Categoria categoria) {
-        categoria = entityManager.merge(categoria);
-        entityManager.flush();
-        return categoria;
-    } 
+    }
     
-    public List<Categoria> categoriaPorNome(String nome) {
-        TypedQuery<Categoria> query = entityManager.createNamedQuery("Categoria.porNome", Categoria.class);
-        query.setParameter("nome", nome);
-        return query.getResultList();
+    @TransactionAttribute(SUPPORTS)
+    public Categoria categoriaPorNome(@NotBlank String nome) {
+        return super.consultarEntidade(new Object[] {nome}, "Categoria.porNome");
     }
 }

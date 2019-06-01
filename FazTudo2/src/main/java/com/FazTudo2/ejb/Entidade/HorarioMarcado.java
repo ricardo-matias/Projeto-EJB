@@ -25,6 +25,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Future;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -59,11 +60,12 @@ public class HorarioMarcado extends Entidade implements Serializable{
     
     public HorarioMarcado(){}
     
-    @Future
+    @Future(message = "A data deve estar no futuro")
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "data")
     private Date data;
     
+    @NotNull
     @Column(name = "comparecimento")
     private boolean comparecimento;    
     

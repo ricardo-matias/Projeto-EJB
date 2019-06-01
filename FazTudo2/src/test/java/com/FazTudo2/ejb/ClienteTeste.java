@@ -6,8 +6,12 @@
 package com.FazTudo2.ejb;
 
 import com.FazTudo2.ejb.Entidade.Cliente;
+import com.FazTudo2.ejb.Entidade.HorarioMarcado;
 import com.FazTudo2.ejb.Servicos.ClienteServico;
 import com.FazTudo2.ejb.Servicos.DonoEstabelecimentoServico;
+import com.FazTudo2.ejb.Entidade.Nivel;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 import javax.ejb.EJBException;
 import javax.naming.NamingException;
@@ -85,7 +89,7 @@ public class ClienteTeste extends Teste {
     public void persistirCliente() {
         Cliente cliente = clienteServico.criar();
         cliente.setNome("Teste EJB");
-        cliente.setNivel(3);
+        //cliente.setNivel(Nivel.INICIANTE);
         cliente.setLogin("Client99");
         cliente.setSenha("Dieg!1998");
         clienteServico.persistir(cliente);
@@ -108,6 +112,32 @@ public class ClienteTeste extends Teste {
                 assertThat(erroValidacao.getMessage(),
                         CoreMatchers.anyOf(startsWith("{com.FazTudo2.ejb.Entidade.Usuario.senha}"),
                                 startsWith("A senha deve conter no minimo 6 caracteres")));
+            }
+            
+            throw ex;
+        }
+    }
+    
+    @Test(expected = EJBException.class)
+    public void persistirClienteInvalido() {
+        Cliente cliente = clienteServico.criar();
+        cliente.setNome("Novo Cliente");
+        cliente.setNivel(4);
+        cliente.setLogin("TestClient");
+        cliente.setSenha("Cliente!391");
+        Calendar calendar = new GregorianCalendar();
+        calendar.set(2020, Calendar.DECEMBER, 20);
+        cliente.setDataNascimento(calendar.getTime());
+        try {
+            clienteServico.atualizar(cliente);
+        } catch (EJBException ex) {
+            assertTrue(ex.getCause() instanceof ConstraintViolationException);
+            ConstraintViolationException causa
+                    = (ConstraintViolationException) ex.getCause();
+            for (ConstraintViolation erroValidacao : causa.getConstraintViolations()) {
+                assertThat(erroValidacao.getMessage(),
+                        CoreMatchers.anyOf(startsWith("{com.FazTudo2.ejb.Entidade.Usuario.dataNascimento}"),
+                                startsWith("A data de nascimento deve ser uma data do passado")));
             }
             
             throw ex;

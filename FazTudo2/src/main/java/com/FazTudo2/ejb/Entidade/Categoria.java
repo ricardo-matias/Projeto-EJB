@@ -22,6 +22,8 @@ import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  *
@@ -34,7 +36,7 @@ import javax.persistence.Table;
         {
             @NamedQuery(
                     name = "Categoria.porNome",
-                    query = "SELECT c FROM Categoria c WHERE c.nome LIKE :nome ORDER BY c.nome DESC"
+                    query = "SELECT c FROM Categoria c WHERE c.nome LIKE ?1 ORDER BY c.nome DESC"
             //query = "select c from Categoria c where c.nome like :nome order by c.id"
             )
         }
@@ -50,7 +52,9 @@ import javax.persistence.Table;
 )
 public class Categoria extends Entidade implements Serializable {
 
-    @Column(name = "txt_nome", length = 45, nullable = false)
+    @NotBlank
+    @Size(max = 50)
+    @Column(name = "txt_nome")
     private String nome;
 
     @ManyToMany(mappedBy = "categorias", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})

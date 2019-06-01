@@ -9,12 +9,13 @@ import com.FazTudo2.ejb.Entidade.Cliente;
 import com.FazTudo2.ejb.Entidade.HorarioMarcado;
 import com.FazTudo2.ejb.Entidade.Servico;
 import com.FazTudo2.ejb.Servicos.ClienteServico;
-import com.FazTudo2.ejb.Servicos.DonoEstabelecimentoServico;
 import com.FazTudo2.ejb.Servicos.HorarioMarcadoServico;
 import com.FazTudo2.ejb.Servicos.ServicoServico;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 import javax.ejb.EJBException;
 import javax.naming.NamingException;
@@ -34,10 +35,14 @@ import static org.junit.Assert.*;
 public class HorarioMarcadoTeste extends Teste {
 
     private HorarioMarcadoServico horarioServico;
+    private ClienteServico clienteServico;
+    private ServicoServico servicoServico;
 
     @Before
     public void setUp() throws NamingException {
         horarioServico = (HorarioMarcadoServico) container.getContext().lookup("java:global/classes/ejb/HorarioMarcadoServico!com.FazTudo2.ejb.Servicos.HorarioMarcadoServico");
+        clienteServico = (ClienteServico) container.getContext().lookup("java:global/classes/ejb/ClienteServico!com.FazTudo2.ejb.Servicos.ClienteServico");
+        servicoServico = (ServicoServico) container.getContext().lookup("java:global/classes/ejb/ServicoServico!com.FazTudo2.ejb.Servicos.ServicoServico");
     }
 
     @After
@@ -68,10 +73,7 @@ public class HorarioMarcadoTeste extends Teste {
         Date d = formato.parse("22/06/2020");
         HorarioMarcado horario = horarioServico.horarioPorData(d).get(0);
         assertNotNull(horario.getId());
-        assertEquals(true, horario.getComparecimento());
-        assertEquals(d.getDay(), horario.getData().getDay());
-        assertEquals(d.getMonth(), horario.getData().getMonth());
-        assertEquals(d.getYear(), horario.getData().getYear());
+        assertEquals("Nicolas Melo", horario.getCliente().getNome());
     }
  
     @Test
@@ -82,36 +84,46 @@ public class HorarioMarcadoTeste extends Teste {
         horario = horarioServico.atualizar(horario);
         assertEquals(true, horario.getComparecimento());
     }
-    /*
+    
     @Test
-    public void persistirServico() {
-        Servico servico = servicoServico.criar();
-        servico.setNome("Teste EJB");
-        servico.setDescricao("Servico para teste de persistência");
-        servicoServico.persistir(servico);
-        assertNotNull(servico.getId());
-        assertTrue(servicoServico.existe(servico));
+    public void persistirHorario() {
+        Calendar calendar = new GregorianCalendar();
+        calendar.set(2020, Calendar.JANUARY, 15);
+        HorarioMarcado horario = horarioServico.criar();
+        horario.setComparecimento(true);
+        List<Cliente> clientes = clienteServico.clientePorNome("Diego Santos");
+        assertEquals(1, clientes.size());
+        Cliente cliente = clientes.get(0);
+        horario.setCliente(cliente);
+        List<Servico> servicos = servicoServico.servicoPorNome("Lava Jato");
+        Servico servico = servicos.get(0);
+        horario.setServico(servico);
+        horario.setData(calendar.getTime());
+        horarioServico.persistir(horario);
+        assertNotNull(horario.getId());
+        assertTrue(horarioServico.existe(horario));
     } 
     
     @Test(expected = EJBException.class)
-    public void atualizarServicoInvalido() {
-        Servico servico = servicoServico.consultarPorId(5L);
-        servico.setDescricao("Venda de bebidas babaca");
-        
+    public void atualizarHorarioInvalido() {
+        HorarioMarcado horario = horarioServico.consultarPorId(1L);
+        Calendar calendar = new GregorianCalendar();
+        calendar.set(2018, Calendar.JANUARY, 15);
+        horario.setData(calendar.getTime());
         try {
-            servicoServico.atualizar(servico);
+            horarioServico.atualizar(horario);
         } catch (EJBException ex) {
             assertTrue(ex.getCause() instanceof ConstraintViolationException);
             ConstraintViolationException causa
                     = (ConstraintViolationException) ex.getCause();
             for (ConstraintViolation erroValidacao : causa.getConstraintViolations()) {
                 assertThat(erroValidacao.getMessage(),
-                        CoreMatchers.anyOf(startsWith("{com.FazTudo2.ejb.Entidade.Servico.descricao}"),
-                                startsWith("A descrição não pode conter palavrões")));
+                        CoreMatchers.anyOf(startsWith("{com.FazTudo2.ejb.Entidade.HorarioMarcado.data}"),
+                                startsWith("A data deve estar no futuro")));
             }
             
             throw ex;
         }
-    }*/
+    }
 
 }

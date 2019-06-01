@@ -43,17 +43,16 @@ public class CategoriaTeste extends Teste {
 
     @Test
     public void consultarCategoriaPorId() {
-        Categoria categoria = categoriaServico.consultarCategoriaPorId(2L);
+        Categoria categoria = categoriaServico.consultarPorId(2L);
         assertNotNull(categoria.getId());
         assertEquals("Esporte", categoria.getNome());
     }
     
     @Test
     public void consultarCategoriaPorNome() {
-        List<Categoria> categorias = categoriaServico.categoriaPorNome("Esporte");
-        assertEquals(1, categorias.size());
-        assertNotNull(categorias.get(0).getId());
-        assertEquals("Esporte", categorias.get(0).getNome());
+        Categoria categoria = categoriaServico.categoriaPorNome("Esporte");
+        assertNotNull(categoria.getId());
+        assertEquals("Esporte", categoria.getNome());
     }
     
     @Test
@@ -72,31 +71,5 @@ public class CategoriaTeste extends Teste {
         categoria = categoriaServico.atualizar(categoria);
         assertEquals("Estetica", categoria.getNome());
     }
-    
-
-    /*@Test
-    public void consultarItensPorTitulo() {
-        assertEquals(1, itemServico.getItensPorTitulo("boss DM-2").size());
-    }*/
-
-//    @Test
-//    public void adicionarOferta() {
-//        Item item = itemServico.consultarPorId(new Long(6));
-//        assertNotNull(item);
-//        Comprador comprador = compradorServico.consultarPorId(new Long(2));
-//        Oferta oferta = item.criarOferta();
-//        oferta.setComprador(comprador);
-//        oferta.setValor(BigDecimal.valueOf(500.00));
-//        assertFalse(item.adicionar(oferta)); //Oferta menor que valor mínimo
-//        oferta.setValor(BigDecimal.valueOf(750.00));
-//        assertTrue(item.adicionar(oferta)); //Oferta igual ao valor mínimo
-//        comprador = compradorServico.consultarPorId(new Long(1));
-//        oferta = item.criarOferta();
-//        oferta.setComprador(comprador);
-//        oferta.setValor(BigDecimal.valueOf(745.00));
-//        assertFalse(item.adicionar(oferta)); //Oferta menor que oferta maior oferta
-//        oferta.setValor(BigDecimal.valueOf(770.00));
-//        assertTrue(item.adicionar(oferta)); //Oferta maior que oferta atual)
-//    }
 
 }

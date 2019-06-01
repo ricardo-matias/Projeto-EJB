@@ -50,7 +50,7 @@ public abstract class Usuario extends Entidade implements Serializable {
     @Column(name = "txt_nome", length = 100, nullable = false)
     protected String nome;
 
-    @Past
+    @Past(message = "A data de nascimento deve ser uma data do passado")
     @Temporal(TemporalType.DATE)
     @Column(name = "dt_data_nascimento", nullable = true /* nullable true para testes*/)
     protected Date dataNascimento;
