@@ -3,5 +3,7 @@ com/FazTudo2/ejb/Teste.class
 com/FazTudo2/ejb/DonoEstabelecimentoTeste.class
 com/FazTudo2/ejb/DbUnitUtil.class
 com/FazTudo2/ejb/ServicoTeste.class
+com/FazTudo2/ejb/TestSuite.class
+com/FazTudo2/ejb/HorarioMarcadoTeste.class
 com/FazTudo2/ejb/CategoriaTeste.class
 com/FazTudo2/ejb/EstabelecimentoTeste.class

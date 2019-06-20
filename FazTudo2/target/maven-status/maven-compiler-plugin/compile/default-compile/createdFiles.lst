@@ -11,8 +11,8 @@ com/FazTudo2/ejb/Entidade/Endereco_.class
 com/FazTudo2/ejb/Entidade/Categoria.class
 validacoes/ValidaPalavrao.class
 com/FazTudo2/ejb/Entidade/Foto_.class
-com/FazTudo2/ejb/Beans/CategoriaBean.class
 com/FazTudo2/ejb/Entidade/Cliente_.class
+com/FazTudo2/ejb/Servicos/HorarioMarcadoServico.class
 com/FazTudo2/ejb/Servicos/ServicoBean.class
 com/FazTudo2/ejb/Entidade/Estabelecimento_.class
 com/FazTudo2/ejb/Entidade/Entidade_.class

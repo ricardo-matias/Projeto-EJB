@@ -6,10 +6,7 @@
 package com.FazTudo2.ejb;
 
 import com.FazTudo2.ejb.Entidade.Categoria;
-import com.FazTudo2.ejb.Entidade.Servico;
 import com.FazTudo2.ejb.Servicos.CategoriaServico;
-import java.math.BigDecimal;
-import java.util.List;
 import javax.naming.NamingException;
 import org.junit.After;
 import org.junit.Before;
@@ -60,7 +57,8 @@ public class CategoriaTeste extends Teste {
         Categoria categoria = categoriaServico.criar();
         categoria.setNome("Teste EJB");
         categoriaServico.persistir(categoria);
-        assertTrue(categoriaServico.existe(categoria));
+        assertNotNull(categoria.getId());
+        //assertTrue(categoriaServico.existe(categoria));
     } 
     
     @Test

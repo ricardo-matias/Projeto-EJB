@@ -46,7 +46,7 @@ import javax.persistence.Table;
             )
             ,
             
-            @NamedQuery( // é mais interessante colocar essa query em usuário?
+            @NamedQuery( 
                     name = "Cliente.porNome",
                     query = "select c FROM Cliente c WHERE c.nome LIKE ?1 ORDER BY c.nome DESC"
             )
@@ -54,7 +54,7 @@ import javax.persistence.Table;
 )
 
 @NamedNativeQueries(
-        @NamedNativeQuery( // seleciona clientes de acordo com o comparecimento de horario marcado
+        @NamedNativeQuery( 
                 name = "Cliente.porComparecimento",
                 query = "SELECT DISTINCT "
                 + "u.id, u.disc_usuario, u.dt_data_nascimento, u.txt_login, u.txt_nome, u.txt_senha, u.foto "
@@ -67,7 +67,7 @@ import javax.persistence.Table;
 )
 public class Cliente extends Usuario implements Serializable {
 
-    //@Enumerated(EnumType.ORDINAL)
+    
     @Column(name = "nivel", nullable = true/*, length = 4*/)
     private int nivel;
 
